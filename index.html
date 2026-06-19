@@ -176,6 +176,8 @@ Released   : 20130631
     padding: 5px 0;
     z-index: 9999;              /* 保证显示在最上层 */
     border-radius: 4px;         /* 微微的圆角 */
+	max-height: 350px;   /* 限制下拉菜单的最大高度，10个选项不会冲出屏幕 */
+overflow-y: auto;    /* 选项过多时，菜单内部会自动出现上下滚动条 */
   }
 
   /* 下拉菜单里面每一行字的样式 */
