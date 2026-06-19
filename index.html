@@ -161,6 +161,9 @@ Released   : 20130631
   /* 让导航栏的列表项具备定位能力 */
   #menu ul li {
     position: relative !important;
+	#menu ul li {
+    position: relative !important;
+    z-index: 99999 !important; /* 🌟 尝试在这里强行提升每一项的层级 */
   }
 
   /* 默认把下拉框藏起来 */
