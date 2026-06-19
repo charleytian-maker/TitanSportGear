@@ -1957,7 +1957,7 @@ ul.contact li a.icon-rss:before
 	font-weight: 600;
 	text-transform: uppercase;
 	outline: 0;
-	color: #4A4A4A;
+	color: #000000;
 }
 
 #menu li:hover a, #menu li.active a, #menu li.active span
