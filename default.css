@@ -2150,7 +2150,7 @@ ul.contact li a.icon-rss:before
 .my-dropdown-menu {
     display: none;             /* 默认隐藏 */
     position: absolute;        /* 绝对定位，悬浮在导航栏下方 */
-    background-color: #ffd700; /* 菜单背景色，建议设为和您导航栏一样的黄色 */
+    background-color: #ffff00; /* 菜单背景色，建议设为和您导航栏一样的黄色 */
     min-width: 180px;          /* 菜单的最小宽度 */
     box-shadow: 0px 8px 16px rgba(0,0,0,0.2); /* 加上阴影，更有立体感 */
     z-index: 999;              /* 确保菜单浮在最上层，不被下面的内容遮挡 */
