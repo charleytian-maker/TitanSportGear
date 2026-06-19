@@ -2171,6 +2171,6 @@ ul.contact li a.icon-rss:before
 }
 
 /* 5. 核心触发器：当鼠标放到 Products 上时，把菜单显示出来 */
-.dropdown-item:hover .my-dropdown-menu {
-    display: block;            /* 鼠标悬停时显示 */
+#menu ul li:hover .my-dropdown-menu {
+    display: block !important; /* 用 !important 强制让它显示出来 */
 }
