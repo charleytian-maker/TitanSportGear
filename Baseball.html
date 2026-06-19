@@ -1,1 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://w3.org">
+<html xmlns="http://w3.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>basketball - TitanSportGear</title>
+<link href="http://googleapis.com" rel="stylesheet" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
 
+<!-- 🌟 这里的内联 CSS 专门用来排列您的 25 张篮球图片 -->
+<style type="text/css">
+/* 让 basketball 页面的下拉菜单也有滚动条 */
+.my-dropdown-menu {
+    max-height: 250px !important;   /* 限制最大高度 */
+    overflow-y: auto !important;    /* 开启垂直滚动条 */
+}
+/* 25张图片的外层大盒子 */
+.basketball-container {
+    background-color: #1a1a1a;  /* 保持门楣以下依然是高档的深黑色 */
+    padding: 60px 20px;         /* 上下左右留出舒服的间距 */
+}
+
+.basketball-gallery {
+    max-width: 1200px;          /* 限制最大宽度，防止在大屏幕上图片太散 */
+    margin: 0 auto;             /* 居中显示 */
+    display: grid;              /* 启用现代网格排版 */
+    grid-template-columns: repeat(5, 1fr); /* 核心：每行精准排列 5 张图片 */
+    gap: 20px;                  /* 图片与图片之间的间隙 */
+}
+
+/* 每一张图片的样式 */
+.basketball-gallery img {
+    width: 100%;                /* 宽度自动撑满网格 */
+    height: 220px;              /* 固定高度，确保每张图大小完全一致 */
+    object-fit: cover;          /* 图片自动裁剪填充，不会变形拉伸 */
+    border-radius: 6px;         /* 微微的圆角，更美观 */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5); /* 给图片加一点立体阴影 */
+    transition: transform 0.3s; /* 鼠标放上去时加上平滑动画 */
+}
+
+/* 鼠标放到图片上时的微动特效 */
+.basketball-gallery img:hover {
+    transform: translateY(-5px); /* 图片微微往上浮起 */
+}
+</style>
+</head>
+<body>
+
+    <!-- 🌟 门楣部分：完全保留您的原始导航栏代码，确保切换时顶部完全不动 -->
+    <div id="header-wrapper">
+        <div id="header" class="container">
+            <div id="logo">
+                <h1><a href="index.html"><img src="images/logo-03.jpg" alt="Logo"></a ></h1>
+            </div>
+            <div id="menu">
+    <ul>
+        <li><a href="index.html" accesskey="1" title="">Homepage</a ></li>
+        <li class="dropdown-item">
+            <a href="#" accesskey="2" title="">Products</a >
+            <div class="my-dropdown-menu">
+                <a href="Basketball.html">Basketball</a >
+                <a href="Soccerball.html">Soccerball</a >
+                <a href="Volleyball.html">Volleyball</a >
+                <a href="Playground ball.html">Playground ball</a>
+                <a href="American football.html">American football</a>
+                <a href="Rugby ball.html">Rugby ball</a >
+                <a href="Handball.html">Handball</a >
+                <a href="Baseball.html">Baseball</a >
+                <a href="Tennis ball.html">Tennis ball</a >
+                <a href="Badminton.html">Badminton</a >
+                <a href="Beach racket set.html">Beach racket set</a>
+                <a href="Pickleball.html">Pickleball</a >
+            </div>
+          </li>
+        <li><a href="#" accesskey="3" title="">About Us</a></li>
+				<li><a href="#" accesskey="4" title="">Workshop</a></li>
+				<li><a href="#" accesskey="5" title="">Contact Us</a></li>
+        </ul>
+      </div>  
+    </div>   
+  </div>
+</div>
+            
+    <!-- 🌟 门楣下方：这里已经剔除了原本的 welcome 区域，换成了 25 张图片 -->
+    <div class="basketball-container">
+        <div class="basketball-gallery">
+            <!-- ⚠️ 请把下方的 images/ball1.jpg 等换成您电脑里真实的图片路径 -->
+            <img src="images/ball1.jpg" alt="Basketball Product 1">
+            <img src="images/ball2.jpg" alt="Basketball Product 2">
+            <img src="images/ball3.jpg" alt="Basketball Product 3">
+            <img src="images/ball4.jpg" alt="Basketball Product 4">
+            <img src="images/ball5.jpg" alt="Basketball Product 5">
+            
+            <img src="images/ball6.jpg" alt="Basketball Product 6">
+            <img src="images/ball7.jpg" alt="Basketball Product 7">
+            <img src="images/ball8.jpg" alt="Basketball Product 8">
+            <img src="images/ball9.jpg" alt="Basketball Product 9">
+            <img src="images/ball10.jpg" alt="Basketball Product 10">
+            
+            <img src="images/ball11.jpg" alt="Basketball Product 11">
+            <img src="images/ball12.jpg" alt="Basketball Product 12">
+            <img src="images/ball13.jpg" alt="Basketball Product 13">
+            <img src="images/ball14.jpg" alt="Basketball Product 14">
+            <img src="images/ball15.jpg" alt="Basketball Product 15">
+            
+            <img src="images/ball16.jpg" alt="Basketball Product 16">
+            <img src="images/ball17.jpg" alt="Basketball Product 17">
+            <img src="images/ball18.jpg" alt="Basketball Product 18">
+            <img src="images/ball19.jpg" alt="Basketball Product 19">
+            <img src="images/ball20.jpg" alt="Basketball Product 20">
+            
+            <img src="images/ball21.jpg" alt="Basketball Product 21">
+            <img src="images/ball22.jpg" alt="Basketball Product 22">
+            <img src="images/ball23.jpg" alt="Basketball Product 23">
+            <img src="images/ball24.jpg" alt="Basketball Product 24">
+            <img src="images/ball25.jpg" alt="Basketball Product 25">
+        </div>
+    </div>
+
+</body>
+</html>
