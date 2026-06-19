@@ -2140,3 +2140,37 @@ ul.contact li a.icon-rss:before
     width: auto;
     display: block;
 }
+/* 1. 让包含 Products 的列表项具备定位能力 */
+.dropdown-item {
+    position: relative;
+    display: inline-block;
+}
+
+/* 2. 核心：默认情况下把下拉菜单藏起来 */
+.my-dropdown-menu {
+    display: none;             /* 默认隐藏 */
+    position: absolute;        /* 绝对定位，悬浮在导航栏下方 */
+    background-color: #ffd700; /* 菜单背景色，建议设为和您导航栏一样的黄色 */
+    min-width: 180px;          /* 菜单的最小宽度 */
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2); /* 加上阴影，更有立体感 */
+    z-index: 999;              /* 确保菜单浮在最上层，不被下面的内容遮挡 */
+    text-align: left;          /* 文字左对齐 */
+}
+
+/* 3. 让菜单里的子链接变成垂直排列 */
+.my-dropdown-menu a {
+    color: #000000;            /* 文字颜色 */
+    padding: 10px 15px;        /* 内边距 */
+    text-decoration: none;     /* 去掉下划线 */
+    display: block;            /* 关键：变成块级元素，单独占一行 */
+}
+
+/* 4. 鼠标悬停在子菜单上时的变色效果（可选） */
+.my-dropdown-menu a:hover {
+    background-color: #e6c200; /* 鼠标放上去时颜色变深一点 */
+}
+
+/* 5. 核心触发器：当鼠标放到 Products 上时，把菜单显示出来 */
+.dropdown-item:hover .my-dropdown-menu {
+    display: block;            /* 鼠标悬停时显示 */
+}
