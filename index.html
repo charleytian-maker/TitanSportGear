@@ -31,7 +31,15 @@ Released   : 20130631
 		<div id="menu">
 			<ul>
 				<li class="current_page_item"><a href="#" accesskey="1" title="">Homepage</a></li>
-				<li><a href="#" accesskey="2" title="">Products</a></li>
+				<li class="dropdown-item">
+  <a href=" " accesskey="2" title="">Products ▾</a >
+  <!-- 这里是下拉菜单的子项 -->
+  <div class="my-dropdown-menu">
+    <a href="#">Sporting Goods</a >
+    <a href="#">Fitness Gear</a >
+    <a href="#">Accessories</a >
+  </div>
+</li>
 				<li><a href="#" accesskey="3" title="">About Us</a></li>
 				<li><a href="#" accesskey="4" title="">Workshop</a></li>
 				<li><a href="#" accesskey="5" title="">Contact Us</a></li>
@@ -141,93 +149,49 @@ Released   : 20130631
 </body>
 </html>
 <style>
-  /* 自动寻找导航栏里面的链接 */
-  nav a, .nav-link, .menu-item a, header a {
-    font-size: 25px !important;            /* 强行把字号变大到 18 像素 */
-    font-weight: 600 !important;           /* 强行把字体加粗，更清晰 */
-    text-transform: none !important;       /* 强行允许大小写正常显示 */
-  }
-</style>
-<!-- 自动生成下拉菜单的神奇脚本 -->
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    // 1. 在网页里寻找带有 "PRODUCTS" 文字的导航按钮
-    const links = document.querySelectorAll('nav a, .nav-link, .menu-item a, header a, span, p');
-    let productsLink = null;
-
-    links.forEach(link => {
-      // 只要文字里包含 products（不限大小写），就锁定它
-      if (link.textContent.trim().toUpperCase() === 'PRODUCTS') {
-        productsLink = link;
-      }
-    });
-
-    // 2. 如果找到了 Products 按钮，就强行给它改造成下拉菜单
-    if (productsLink) {
-      // 找到它的爸爸（外层标签），方便做定位
-      const parent = productsLink.parentElement;
-      if (parent) {
-        parent.style.position = 'relative';
-        parent.classList.add('has-dropdown');
-        
-        // 创建下拉菜单的 HTML 结构
-        const dropdown = document.createElement('div');
-        dropdown.className = 'custom-dropdown-menu';
-        dropdown.innerHTML = `
-          <a href=" ">Sporting Goods</a >
-          <a href="/category-2">Fitness Gear</a >
-          <a href="/category-3">Accessories</a >
-        `;
-        
-        // 把下拉菜单塞到 Products 按钮的旁边
-        parent.appendChild(dropdown);
-      }
-    }
-  });
-</script>
-
-<!-- 3. 控制下拉菜单显示和隐藏的样式 -->
-<style>
-  /* 当鼠标移到 Products 上时，显示下拉框 */
-  .has-dropdown:hover .custom-dropdown-menu {
-    display: block !important;
+  /* 让导航栏的列表项具备定位能力 */
+  #menu ul li {
+    position: relative !important;
   }
 
-  /* 下拉框的基本样式 */
-  .custom-dropdown-menu {
-    display: none;             /* 默认隐藏 */
+  /* 默认把下拉框藏起来 */
+  .my-dropdown-menu {
+    display: none;
     position: absolute;
-    top: 100%;                 /* 刚好在文字正下方 */
+    top: 100%;                  /* 刚好在 Products 正下方 */
     left: 50%;
-    transform: translateX(-50%); /* 居中对齐 */
-    background-color: #ffffff; /* 下拉框背景为白色 */
-    min-width: 160px;          /* 宽度 */
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.15); /* 阴影 */
-    border-radius: 4px;        /* 圆角 */
+    transform: translateX(-50%);/* 居中对齐 */
+    background-color: #ffffff;  /* 弹窗背景为白色 */
+    min-width: 160px;           /* 菜单宽度 */
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2); /* 加个高级的阴影 */
     padding: 5px 0;
-    z-index: 99999;            /* 确保不被遮挡 */
+    z-index: 9999;              /* 保证显示在最上层 */
+    border-radius: 4px;         /* 微微的圆角 */
   }
 
-  /* 下拉框里面的每一个产品文字 */
-  .custom-dropdown-menu a {
+  /* 下拉菜单里面每一行字的样式 */
+  .my-dropdown-menu a {
     display: block !important;
-    color: #333333 !important; /* 字是黑色的 */
+    color: #333333 !important;  /* 弹窗里的文字用深灰色，保证白底黑字清晰 */
     padding: 10px 15px !important;
-    text-decoration: none !important;
-    font-size: 15px !important;/* 字体大小 */
-    text-align: center !important;
+    font-size: 15px !important; /* 字号稍微缩小一点 */
     text-transform: none !important; /* 允许大小写 */
-    font-weight: normal !important;
-    border-bottom: 1px solid #f0f0f0;
+    font-weight: normal !important;  /* 不加粗 */
+    text-align: center !important;   /* 文字居中 */
+    text-decoration: none !important;
+    border-bottom: 1px solid #eee;   /* 每行之间的小分隔线 */
+    background: none !important;     /* 清除可能继承的背景 */
+  }
+  .my-dropdown-menu a:last-child { border-bottom: none; }
+
+  /* 鼠标放到下拉选项上时，背景变灰、字变黑 */
+  .my-dropdown-menu a:hover { 
+    background-color: #f5f5f5 !important; 
+    color: #000000 !important; 
   }
 
-  .custom-dropdown-menu a:last-child {
-    border-bottom: none;
-  }
-
-  /* 鼠标悬停在下拉选项上时背景变灰 */
-  .custom-dropdown-menu a:hover {
-    background-color: #f5f5f5 !important;
-    color: #000000 !important;
+  /* 💡 核心：当鼠标悬停在 Products 上时，展现下拉菜单 */
+  .dropdown-item:hover .my-dropdown-menu {
+    display: block !important;
   }
 </style>
