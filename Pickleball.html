@@ -141,6 +141,41 @@
 			
         </div>
     </div>
+<!-- ========================================== -->
+<!-- 1. 弹窗的 HTML 结构（用于显示放大图片和描述） -->
+<!-- ========================================== -->
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    < img id="modalImg" src="" alt="放大图片">
+    <div id="modalDescription" class="modal-desc"></div>
+  </div>
+</div>
 
+<!-- ========================================== -->
+<!-- 2. JavaScript 核心逻辑脚本 -->
+<!-- ========================================== -->
+<script>
+  // 打开弹窗的函数
+  function openModal(imgElement) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+    const modalDesc = document.getElementById("modalDescription");
+
+    modal.style.display = "flex"; // 显示弹窗
+    modalImg.src = imgElement.src; // 让大图的路径等于当前点击的小图路径
+    
+    // 获取小图自带的 alt 属性文字（例如 "Pickleball set 1"）
+    const productTitle = imgElement.alt;
+    
+    // 【自定义描述】您可以在下方自由修改这句产品介绍文字
+    modalDesc.innerText = productTitle + " \n\n 这是一款专为高水平玩家打造的专业匹克球套装。采用碳纤维材质，控球精准，握感舒适。套装内包含2支高品质球拍、4个专业室外球以及一个便携收纳包。"; 
+  }
+
+  // 关闭弹窗的函数
+  function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+  }
+</script>
 </body>
 </html>
