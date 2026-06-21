@@ -22,6 +22,17 @@ Released   : 20130631
 <link href="default_ie6.css" rel="stylesheet" type="text/css" />
 <![endif]-->
 </head>
+	<!-- 弹窗遮罩层 -->
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <!-- 弹窗内容容器 -->
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <!-- 大图 -->
+    < img id="modalImg" src="" alt="放大图片">
+    <!-- 产品说明/描述空行 -->
+    <div id="modalDescription" class="modal-desc"></div>
+  </div>
+</div>
 <body>
 <div id="header-wrapper">
 	<div id="header" class="container">
