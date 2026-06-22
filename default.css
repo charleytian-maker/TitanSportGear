@@ -2240,3 +2240,69 @@ ul.contact li a.icon-rss:before
 #menu .lang-switch a.lang-active {
   color: #DE6D53;
 }
+<style>
+  /* 让导航栏的列表项具备定位能力 */
+  #menu ul li {
+    position: relative !important;
+  }
+<li class="lang-switch">
+  <a href=" " id="lang-en" class="lang-active">EN</a > | <a href="#" id="lang-de">DE</a >
+</li>
+  /* 默认把下拉框藏起来 */
+  .my-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;                  /* 刚好在 Products 正下方 */
+    left: 50%;
+    transform: translateX(-50%);/* 居中对齐 */
+    background-color: #fff176;  /* 弹窗背景为白色 */
+    min-width: 160px;           /* 菜单宽度 */
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2); /* 加个高级的阴影 */
+    padding: 5px 0;
+    z-index: 9999;              /* 保证显示在最上层 */
+    border-radius: 4px;         /* 微微的圆角 */
+	max-height: 350px;   /* 限制下拉菜单的最大高度，10个选项不会冲出屏幕 */
+overflow-y: auto;    /* 选项过多时，菜单内部会自动出现上下滚动条 */
+  }
+
+  /* 下拉菜单里面每一行字的样式 */
+  .my-dropdown-menu a {
+    display: block !important;
+    color: #333333 !important;  /* 弹窗里的文字用深灰色，保证白底黑字清晰 */
+    padding: 10px 15px !important;
+    font-size: 12px !important; /* 字号稍微缩小一点 */
+    text-transform: none !important; /* 允许大小写 */
+    font-weight: normal !important;  /* 不加粗 */
+    text-align: center !important;   /* 文字居中 */
+    text-decoration: none !important;
+    border-bottom: 1px solid #eee;   /* 每行之间的小分隔线 */
+    background: none !important;     /* 清除可能继承的背景 */
+  }
+  .my-dropdown-menu a:last-child { border-bottom: none; }
+
+  /* 鼠标放到下拉选项上时，背景变灰、字变黑 */
+  .my-dropdown-menu a:hover { 
+    background-color: #f5f5f5 !important; 
+    color: #000000 !important; 
+  }
+
+  /* 💡 核心：当鼠标悬停在 Products 上时，展现下拉菜单 */
+  .dropdown-item:hover .my-dropdown-menu {
+    display: block !important;
+  }
+	#header-wrapper {
+    position: relative; /* 赋予定位能力 */
+    z-index: 99999;     /* 设置极高的层级，绝对压过下方的黑色大图 */
+}
+	#welcome {
+    position: relative;    /* 赋予它层级控制能力 */
+    z-index: 1 !important; /* 把它压到最底层，这样绝不会挡住上面的菜单 */
+}
+	/* 强行解除所有父级盒子的溢出隐藏限制 */
+#header-wrapper, 
+#header, 
+#menu, 
+.dropdown-item {
+    overflow: visible !important;
+}
+</style>
