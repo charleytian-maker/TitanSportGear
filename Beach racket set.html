@@ -23,14 +23,14 @@
     max-width: 1200px;          /* 限制最大宽度，防止在大屏幕上图片太散 */
     margin: 0 auto;             /* 居中显示 */
     display: grid;              /* 启用现代网格排版 */
-    grid-template-columns: repeat(auto-fit, minax(280px, 1fr)); /* 核心：每行精准排列 5 张图片 */
+    grid-template-columns: repeat(5, 1fr); /* 核心：每行精准排列 5 张图片 */
     gap: 20px;                  /* 图片与图片之间的间隙 */
 }
 
 /* 每一张图片的样式 */
 .basketball-gallery img {
     width: 100%;                /* 宽度自动撑满网格 */
-    height: 280px;              /* 固定高度，确保每张图大小完全一致 */
+    height: 320px;              /* 固定高度，确保每张图大小完全一致 */
     object-fit: cover;          /* 图片自动裁剪填充，不会变形拉伸 */
     border-radius: 6px;         /* 微微的圆角，更美观 */
     box-shadow: 0 4px 10px rgba(0,0,0,0.5); /* 给图片加一点立体阴影 */
