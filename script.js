@@ -17,3 +17,24 @@ function openModal(imgElement) {
 // 2. 关闭弹窗的函数
 function closeModal() {
     document.getElementById("imageModal").style.display = "none";
+    
+ocument.addEventListener('DOMContentLoaded', function() {
+  var path = window.location.pathname;
+  var fileName = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
+  var isGerman = path.indexOf('/de/') === 0 || path.indexOf('/de/') > -1;
+
+  var enLink = document.getElementById('lang-en');
+  var deLink = document.getElementById('lang-de');
+
+  if (isGerman) {
+    deLink.classList.add('lang-active');
+    enLink.classList.remove('lang-active');
+    enLink.href = '/' + fileName;
+    deLink.href = '/de/' + fileName;
+  } else {
+    enLink.classList.add('lang-active');
+    deLink.classList.remove('lang-active');
+    enLink.href = '/' + fileName;
+    deLink.href = '/de/' + fileName;
+  }
+});
