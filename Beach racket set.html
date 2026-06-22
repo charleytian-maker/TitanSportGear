@@ -23,7 +23,7 @@
     max-width: 1200px;          /* 限制最大宽度，防止在大屏幕上图片太散 */
     margin: 0 auto;             /* 居中显示 */
     display: grid;              /* 启用现代网格排版 */
-    grid-template-columns: repeat(4, 1fr); /* 核心：每行精准排列 5 张图片 */
+    grid-template-columns: repeat(auto-fit, minax(280px, 1fr)); /* 核心：每行精准排列 5 张图片 */
     gap: 20px;                  /* 图片与图片之间的间隙 */
 }
 
