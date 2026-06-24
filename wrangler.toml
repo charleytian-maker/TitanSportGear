@@ -1,1 +1,1 @@
-
+#:schema https://cloudflare.com name = "tian" [assets] directory = "." binding = "ASSETS" # 必须添加以下排除规则，忽略 .git 目录及其他不需要的超大文件 exclude = [ ".git/**", "node_modules/**", "*.mp4", "*.zip" ]
