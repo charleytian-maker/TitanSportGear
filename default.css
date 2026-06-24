@@ -1869,7 +1869,11 @@ ul.contact li a.icon-rss:before
 #header-wrapper
 {
 	overflow: visible;
-	background: #FFFF00;
+	background-image:url('images/a.jpg');
+	background-size:cover;
+	background-position:center;
+	background-repeat:no-repeat;
+	height:150px
 }
 
 #header
