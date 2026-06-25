@@ -37,4 +37,16 @@ ocument.addEventListener('DOMContentLoaded', function() {
     enLink.href = '/' + fileName;
     deLink.href = '/de/' + fileName;
   }
+const aboutBtn = document.getElementById('about-us-btn');
+const contactPanel = document.getElementById('contact-panel');
+
+// 点击 About Us 切换显示/隐藏
+aboutBtn.addEventListener('click', function(event) {
+  event.stopPropagation(); // 阻止事件冒泡
+  contactPanel.classList.toggle('is-active');
+});
+
+// 点击页面其他任何空白地方时，自动收起面板
+document.addEventListener('click', function() {
+  contactPanel.classList.remove('is-active');
 });
