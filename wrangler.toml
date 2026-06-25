@@ -3,4 +3,4 @@ name = "tian"
 compatibility_date = "2026-06-25"
 
 [assets]
-directory = "." # 静态文件就在仓库根目录
+directory = "./dist" # 静态文件就在仓库根目录
