@@ -1,181 +1,203 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://w3.org">
-<html xmlns="http://w3.org">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>basketball - TitanSportGear</title>
-<link href="http://googleapis.com" rel="stylesheet" />
+<title>Basketball - TitanSportGear</title>
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet" />
 <link href="default.css" rel="stylesheet" type="text/css" media="all" />
 
-<!-- 🌟 这里的内联 CSS 专门用来排列您的 25 张篮球图片 -->
 <style type="text/css">
-/* 让 basketball 页面的下拉菜单也有滚动条 */
+/* 导航下拉菜单滚动 */
 .my-dropdown-menu {
-    max-height: 250px !important;   /* 限制最大高度 */
-    overflow-y: auto !important;    /* 开启垂直滚动条 */
+    max-height: 250px !important;
+    overflow-y: auto !important;
 }
-/* 25张图片的外层大盒子 */
+
+/* 图片画廊容器 */
 .basketball-container {
-    background-color: #1a1a1a;  /* 保持门楣以下依然是高档的深黑色 */
-    padding: 60px 20px;         /* 上下左右留出舒服的间距 */
+    background-color: #1a1a1a;
+    padding: 60px 20px;
 }
-
 .basketball-gallery {
-    max-width: 1200px;          /* 限制最大宽度，防止在大屏幕上图片太散 */
-    margin: 0 auto;             /* 居中显示 */
-    display: grid;              /* 启用现代网格排版 */
-    grid-template-columns: repeat(5, 1fr); /* 核心：每行精准排列 5 张图片 */
-    gap: 20px;                  /* 图片与图片之间的间隙 */
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
 }
-
-/* 每一张图片的样式 */
 .basketball-gallery img {
-    width: 100%;                /* 宽度自动撑满网格 */
-    height: 220px;              /* 固定高度，确保每张图大小完全一致 */
-    object-fit: cover;          /* 图片自动裁剪填充，不会变形拉伸 */
-    border-radius: 6px;         /* 微微的圆角，更美观 */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5); /* 给图片加一点立体阴影 */
-    transition: transform 0.3s; /* 鼠标放上去时加上平滑动画 */
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    transition: transform 0.3s;
+}
+.basketball-gallery img:hover {
+    transform: translateY(-5px);
 }
 
-/* 鼠标放到图片上时的微动特效 */
-.basketball-gallery img:hover {
-    transform: translateY(-5px); /* 图片微微往上浮起 */
+/* 图片弹窗基础样式（缺失补充） */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.85);
+    align-items: center;
+    justify-content: center;
+}
+.modal-content {
+    max-width: 90%;
+    position: relative;
+}
+#modalImg {
+    max-width: 100%;
+    max-height:70vh;
+    object-fit:contain;
+}
+.close-btn {
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    top: -30px;
+    cursor: pointer;
+}
+.modal-desc {
+    color: #fff;
+    margin-top:12px;
+    text-align:center;
 }
 </style>
 </head>
 <body>
-
-    <!-- 🌟 门楣部分：完全保留您的原始导航栏代码，确保切换时顶部完全不动 -->
-    <div id="header-wrapper">
-        <div id="header" class="container">
-            <div id="logo">
-                <h1><a href="index.html"><img src="images/logo-02.jpg" alt="Logo"></a ></h1>
-            </div>
-            <div id="menu">
-    <ul>
-        <li><a href="index.html" accesskey="1" title="">Homepage</a ></li>
-        <li class="dropdown-item">
-            <a href="#" accesskey="2" title="">Products</a >
-            <div class="my-dropdown-menu">
-                <a href="Basketball.html">Basketball</a >
-                <a href="Soccerball.html">Soccerball</a >
-                <a href="Volleyball.html">Volleyball</a >
-                <a href="Playground ball.html">Playground ball</a>
-                <a href="American football.html">American football</a>
-                <a href="Rugby ball.html">Rugby ball</a >
-                <a href="Handball.html">Handball</a >
-                <a href="Baseball.html">Baseball</a >
-                <a href="Tennis ball.html">Tennis ball</a >
-                <a href="Badminton.html">Badminton</a >
-                <a href="Beach racket set.html">Beach racket set</a>
-                <a href="Pickleball.html">Pickleball</a >
-            </div>
-          </li>
-        <li><a href="#" accesskey="3" title="">About Us</a></li>
-				<li><a href="#" accesskey="4" title="">Workshop</a></li>
-				<li><a href="#" accesskey="5" title="">Contact Us</a></li>
-        </ul>
-      </div>  
-    </div>   
-  </div>
-</div>
-            
-    <!-- 🌟 门楣下方：这里已经剔除了原本的 welcome 区域，换成了 25 张图片 -->
-    <div class="basketball-container">
-        <div class="basketball-gallery">
-            <!-- ⚠️ 请把下方的 images/ball1.jpg 等换成您电脑里真实的图片路径 -->
-            <img src="images/RBB-036.jpg" alt="RBB-036"onclick="openModal(this)" style="cursor: pointer;">
-            <img src="images/RBB-041.jpg" alt="RBB-041"onclick="openModal(this)" style="cursor: pointer;">
-            <img src="images/RBB-043.jpg" alt="RBB-043"onclick="openModal(this)" style="cursor: pointer;">
-            <img src="images/RBB-044.jpg" alt="RBB-044"onclick="openModal(this)" style="cursor: pointer;">
-            <img src="images/RBB-045.jpg" alt="RBB-045"onclick="openModal(this)" style="cursor: pointer;">
-            
-            <img src="images/RBB-029.jpg" alt="RBB-029"onclick="openModal(this)" style="cursor: pointer;">
-            <img src="images/RBB-048.jpg" alt="RBB-048"onclick="openModal(this)" style="cursor: pointer;">
-            <img src="images/RBB-001.jpg" alt="RBB-001"onclick="openModal(this)" style="cursor: pointer;">
-            <img src="images/RBB-017.jpg" alt="RBB-017"onclick="openModal(this)" style="cursor: pointer;">
-            <img src="images/RBB-011.jpg" alt="RBB-011"onclick="openModal(this)" style="cursor: pointer;">
-            
-            <img src="images/RBB-023.jpg" alt="RBB-023"onclick="openModal(this)" style="cursor: pointer;">
-            <img src="images/RBB-022.jpg" alt="RBB-022"onclick="openModal(this)" style="cursor: pointer;">
-            <img src="images/RBB-024.jpg" alt="RBB-024"onclick="openModal(this)" style="cursor: pointer;">
-            <img src="images/RBB-026.jpg" alt="RBB-026"onclick="openModal(this)" style="cursor: pointer;">
-            <img src="images/RBB-025.jpg" alt="RBB-025"onclick="openModal(this)" style="cursor: pointer;">
-            
-            <img src="images/RBB-005.jpg" alt="RBB-005"onclick="openModal(this)" style="cursor: pointer;">
-            <img src="images/RBB-006.jpg" alt="RBB-006"onclick="openModal(this)" style="cursor: pointer;">
-            <img src="images/RBB-007.jpg" alt="RBB-007"onclick="openModal(this)" style="cursor: pointer;">
-            <img src="images/RBB-008.jpg" alt="RBB-008"onclick="openModal(this)" style="cursor: pointer;">
-            <img src="images/RBB-009.jpg" alt="RBB-009"onclick="openModal(this)" style="cursor: pointer;">
-            
-            <img src="images/RBB-010.jpg" alt="RBB-010"onclick="openModal(this)" style="cursor: pointer;">
-            <img src="images/RBB-012.jpg" alt="RBB-012"onclick="openModal(this)" style="cursor: pointer;">
-            <img src="images/RBB-013.jpg" alt="RBB-013"onclick="openModal(this)" style="cursor: pointer;">
-            <img src="images/RBB-014.jpg" alt="RBB-014"onclick="openModal(this)" style="cursor: pointer;">
-            <img src="images/RBB-015.jpg" alt="RBB-015"onclick="openModal(this)" style="cursor: pointer;">
-			<img src="images/LBB-013.png" alt="LBB-013"onclick="openModal(this)" style="cursor: pointer;">
-			<img src="images/LBB-009.png" alt="LBB-009"onclick="openModal(this)" style="cursor: pointer;">
-			<img src="images/LBB-003.png" alt="LBB-003"onclick="openModal(this)" style="cursor: pointer;">
-			<img src="images/LBB-002.png" alt="LBB-002"onclick="openModal(this)" style="cursor: pointer;">
-			<img src="images/LB-019.png" alt="LBB-019"onclick="openModal(this)" style="cursor: pointer;">
-			<img src="images/LBB-005.png" alt="LBB-005"onclick="openModal(this)" style="cursor: pointer;">
-			<img src="images/LBB-006.png" alt="LBB-006"onclick="openModal(this)" style="cursor: pointer;">
-			<img src="images/LBB-007.png" alt="LBB-007"onclick="openModal(this)" style="cursor: pointer;">
-			<img src="images/LBB-008.png" alt="LBB-008"onclick="openModal(this)" style="cursor: pointer;">
-			<img src="images/LBB-015.png" alt="LBB-015"onclick="openModal(this)" style="cursor: pointer;">
-			<img src="images/LBB-010.png" alt="LBB-010"onclick="openModal(this)" style="cursor: pointer;">
-			<img src="images/LBB-011.png" alt="LBB-011"onclick="openModal(this)" style="cursor: pointer;">
-			<img src="images/ball25.jpg" alt="Basketball Product 38"onclick="openModal(this)" style="cursor: pointer;">
-			<img src="images/ball25.jpg" alt="Basketball Product 39"onclick="openModal(this)" style="cursor: pointer;">
-			<img src="images/ball25.jpg" alt="Basketball Product 40"onclick="openModal(this)" style="cursor: pointer;">
-			<img src="images/ball25.jpg" alt="Basketball Product 41"onclick="openModal(this)" style="cursor: pointer;">
-			<img src="images/ball25.jpg" alt="Basketball Product 42"onclick="openModal(this)" style="cursor: pointer;">
-			<img src="images/ball25.jpg" alt="Basketball Product 43"onclick="openModal(this)" style="cursor: pointer;">
-			<img src="images/ball25.jpg" alt="Basketball Product 44"onclick="openModal(this)" style="cursor: pointer;">
-			<img src="images/ball25.jpg" alt="Basketball Product 45"onclick="openModal(this)" style="cursor: pointer;">
-			<img src="images/ball25.jpg" alt="Basketball Product 46"onclick="openModal(this)" style="cursor: pointer;">
-			<img src="images/ball25.jpg" alt="Basketball Product 47"onclick="openModal(this)" style="cursor: pointer;">
-			<img src="images/ball25.jpg" alt="Basketball Product 48"onclick="openModal(this)" style="cursor: pointer;">
-			<img src="images/ball25.jpg" alt="Basketball Product 49"onclick="openModal(this)" style="cursor: pointer;">
-			<img src="images/ball25.jpg" alt="Basketball Product 50"onclick="openModal(this)" style="cursor: pointer;">
-			
+<div id="header-wrapper">
+    <div id="header" class="container">
+        <div id="logo">
+            <h1><a href=" "><img src="images/logo-02.jpg" alt="Logo"></a ></h1>
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="index.html" accesskey="1" title="">Homepage</a ></li>
+                <li class="dropdown-item">
+                    <a href="#" accesskey="2" title="">Products</a >
+                    <div class="my-dropdown-menu">
+                        <a href="Basketball.html">Basketball</a >
+                        <a href="Soccerball.html">Soccerball</a >
+                        <a href="Volleyball.html">Volleyball</a >
+                        <a href="playgroundball.html">Playground ball</a >
+                        <a href="Americanfootball.html">American football</a >
+                        <a href="Rugbyball.html">Rugby ball</a >
+                        <a href="Handball.html">Handball</a >
+                        <a href="Baseball.html">Baseball</a >
+                        <a href="Tennisball.html">Tennis ball</a >
+                        <a href="Badminton.html">Badminton</a >
+                        <a href="Beachracketset.html">Beach racket set</a >
+                        <a href="Pickleball.html">Pickleball</a >
+                    </div>
+                </li>
+                <li><a href="aboutus.html" accesskey="3" title="">About Us</a ></li>
+                <li><a href="workshop.html" accesskey="4" title="">Workshop</a ></li>
+                <li><a href="contactus.html" accesskey="5" title="">Contact Us</a ></li>
+            </ul>
         </div>
     </div>
-<!-- ========================================== -->
-<!-- 1. 弹窗的 HTML 结构（用于显示放大图片和描述） -->
-<!-- ========================================== -->
+</div>
+
+<div class="basketball-container">
+    <div class="basketball-gallery">
+        <img src="images/RBB-036.jpg" alt="RBB-036" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/RBB-041.jpg" alt="RBB-041" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/RBB-043.jpg" alt="RBB-043" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/RBB-044.jpg" alt="RBB-044" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/RBB-045.jpg" alt="RBB-045" onclick="openModal(this)" style="cursor: pointer;">
+
+        <img src="images/RBB-029.jpg" alt="RBB-029" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/RBB-048.jpg" alt="RBB-048" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/RBB-001.jpg" alt="RBB-001" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/RBB-017.jpg" alt="RBB-017" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/RBB-011.jpg" alt="RBB-011" onclick="openModal(this)" style="cursor: pointer;">
+
+        <img src="images/RBB-023.jpg" alt="RBB-023" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/RBB-022.jpg" alt="RBB-022" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/RBB-024.jpg" alt="RBB-024" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/RBB-026.jpg" alt="RBB-026" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/RBB-025.jpg" alt="RBB-025" onclick="openModal(this)" style="cursor: pointer;">
+
+        <img src="images/RBB-005.jpg" alt="RBB-005" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/RBB-006.jpg" alt="RBB-006" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/RBB-007.jpg" alt="RBB-007" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/RBB-008.jpg" alt="RBB-008" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/RBB-009.jpg" alt="RBB-009" onclick="openModal(this)" style="cursor: pointer;">
+
+        <img src="images/RBB-010.jpg" alt="RBB-010" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/RBB-012.jpg" alt="RBB-012" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/RBB-013.jpg" alt="RBB-013" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/RBB-014.jpg" alt="RBB-014" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/RBB-015.jpg" alt="RBB-015" onclick="openModal(this)" style="cursor: pointer;">
+
+        <img src="images/LBB-013.png" alt="LBB-013" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/LBB-009.png" alt="LBB-009" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/LBB-003.png" alt="LBB-003" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/LBB-002.png" alt="LBB-002" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/LB-019.png" alt="LBB-019" onclick="openModal(this)" style="cursor: pointer;">
+
+        <img src="images/LBB-005.png" alt="LBB-005" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/LBB-006.png" alt="LBB-006" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/LBB-007.png" alt="LBB-007" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/LBB-008.png" alt="LBB-008" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/LBB-015.png" alt="LBB-015" onclick="openModal(this)" style="cursor: pointer;">
+
+        <img src="images/LBB-010.png" alt="LBB-010" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/LBB-011.png" alt="LBB-011" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/ball25.jpg" alt="Basketball Product 38" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/ball25.jpg" alt="Basketball Product 39" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/ball25.jpg" alt="Basketball Product 40" onclick="openModal(this)" style="cursor: pointer;">
+
+        <img src="images/ball25.jpg" alt="Basketball Product 41" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/ball25.jpg" alt="Basketball Product 42" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/ball25.jpg" alt="Basketball Product 43" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/ball25.jpg" alt="Basketball Product 44" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/ball25.jpg" alt="Basketball Product 45" onclick="openModal(this)" style="cursor: pointer;">
+
+        <img src="images/ball25.jpg" alt="Basketball Product 46" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/ball25.jpg" alt="Basketball Product 47" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/ball25.jpg" alt="Basketball Product 48" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/ball25.jpg" alt="Basketball Product 49" onclick="openModal(this)" style="cursor: pointer;">
+        <img src="images/ball25.jpg" alt="Basketball Product 50" onclick="openModal(this)" style="cursor: pointer;">
+    </div>
+</div>
+
 <div id="imageModal" class="modal" onclick="closeModal()">
   <div class="modal-content" onclick="event.stopPropagation()">
     <span class="close-btn" onclick="closeModal()">&times;</span>
-    <img id="modalImg" src="" alt="放大图片">
+    < img id="modalImg" src="" alt="放大图片">
     <div id="modalDescription" class="modal-desc"></div>
   </div>
 </div>
 
-<!-- ========================================== -->
-<!-- 2. JavaScript 核心逻辑脚本 -->
-<!-- ========================================== -->
 <script>
-  // 打开弹窗的函数
-  function openModal(imgElement) {
+function openModal(imgElement) {
     const modal = document.getElementById("imageModal");
     const modalImg = document.getElementById("modalImg");
     const modalDesc = document.getElementById("modalDescription");
 
-    modal.style.display = "flex"; // 显示弹窗
-    modalImg.src = imgElement.src; // 让大图的路径等于当前点击的小图路径
-    
-    // 获取小图自带的 alt 属性文字（例如 "Pickleball set 1"）
-    const productTitle = imgElement.alt;
-    
-    // 【自定义描述】您可以在下方自由修改这句产品介绍文字
-    modalDesc.innerText = productTitle + " \n\n This is a professional pickleball set designed for advanced players. Made of T700 carbon fiber, it offers precise ball control and a comfortable grip. The set includes 2 high-quality paddles, 4 professional outdoor balls, and a portable carrying bag."; 
-  }
+    modal.style.display = "flex";
+    modalImg.src = imgElement.src;
 
-  // 关闭弹窗的函数
-  function closeModal() {
+    const productTitle = imgElement.alt;
+    // 修改为篮球适配文案
+    modalDesc.innerText = productTitle + " \n\n Professional match & training basketball. Crafted with premium composite leather, excellent air retention, stable grip and consistent bounce for indoor and outdoor courts. Custom OEM/ODM printing available.";
+}
+
+function closeModal() {
     document.getElementById("imageModal").style.display = "none";
-  }
+}
 </script>
 </body>
 </html>
