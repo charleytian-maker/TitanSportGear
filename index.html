@@ -13,59 +13,145 @@ Released   : 20130631
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title></title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
+<title>TitanSportGear</title>
+<meta name="keywords" content="sports ball, basketball, soccer ball, volleyball, OEM sports goods" />
+<meta name="description" content="TitanSportGear professional manufacturer & exporter of sporting goods over 20 years, OEM ODM available." />
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet" />
 <link href="default.css" rel="stylesheet" type="text/css" media="all" />
 <!--[if IE 6]>
 <link href="default_ie6.css" rel="stylesheet" type="text/css" />
 <![endif]-->
+<style>
+  /* 导航下拉菜单 */
+  #menu ul li {
+    position: relative !important;
+  }
+  .my-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff176;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    padding: 5px 0;
+    z-index: 9999;
+    border-radius: 4px;
+    max-height: 350px;
+    overflow-y: auto;
+  }
+  .my-dropdown-menu a {
+    display: block !important;
+    color: #333333 !important;
+    padding: 10px 15px !important;
+    font-size: 12px !important;
+    text-transform: none !important;
+    font-weight: normal !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid #eee;
+    background: none !important;
+  }
+  .my-dropdown-menu a:last-child { border-bottom: none; }
+  .my-dropdown-menu a:hover { 
+    background-color: #f5f5f5 !important; 
+    color: #000000 !important; 
+  }
+  .dropdown-item:hover .my-dropdown-menu {
+    display: block !important;
+  }
+  #header-wrapper {
+    position: relative;
+    z-index: 99999;
+  }
+  #welcome {
+    position: relative;
+    z-index: 1 !important;
+  }
+  #header-wrapper, 
+  #header, 
+  #menu, 
+  .dropdown-item {
+    overflow: visible !important;
+  }
+
+  /* 图片弹窗基础样式（缺失补充） */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.85);
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-content {
+    max-width: 90%;
+  }
+  .close-btn {
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    position: absolute;
+    right: 30px;
+    top: 15px;
+    cursor: pointer;
+  }
+  .modal-desc {
+    color: #fff;
+    margin-top:12px;
+    text-align:center;
+  }
+</style>
 </head>
-	<!-- 弹窗遮罩层 -->
+<body>
+<!-- 弹窗移至body内顶部，仅保留一份 -->
 <div id="imageModal" class="modal" onclick="closeModal()">
-  <!-- 弹窗内容容器 -->
   <div class="modal-content" onclick="event.stopPropagation()">
     <span class="close-btn" onclick="closeModal()">&times;</span>
-    <!-- 大图 -->
-    <img id="modalImg"src=""alt="放大图片">
-    <!-- 产品说明/描述空行 -->
+    <div id="modalImgContainer">
+      < img id="modalImg" src="" alt="放大图片" style="max-width: 100%; max-height:70vh; object-fit:contain;"/>
+    </div>
     <div id="modalDescription" class="modal-desc"></div>
   </div>
 </div>
-<body>
+
 <div id="header-wrapper">
 	<div id="header" class="container">
 		<div id="logo">
-			<h1><a href="#"><img src="images/logo-02.jpg" alt="Logo"></a></h1>
+			<h1><a href=" ">< img src="images/logo-02.jpg" alt="Logo"></a ></h1>
 		</div>
 		<div id="menu">
 			<ul>
-				<li class="current_page_item"><a href="#" accesskey="1" title="">Home</a></li>
+				<li class="current_page_item"><a href="#" accesskey="1" title="">Home</a ></li>
 				<li class="dropdown-item">
-  <a href=" " accesskey="2" title="">Products ▾</a >
-  <!-- 这里是下拉菜单的子项 -->
-  <div class="my-dropdown-menu">
-    <a href="Basketball.html">Basketball</a>
-	<a href="Soccerball.html">Soccerball</a>
-	<a href="Volleyball.html">Volleyball</a>
-	<a href="Playground ball.html">Playground ball</a >
-	<a href="American football.html">American football</a >
-    <a href="Rugby ball.html">Rugby ball</a >
-	<a href="Handball.html">Handball</a >
-	<a href="Baseball.html">Baseball</a >
-	<a href="Tennis ball.html">Tennis ball</a >
-    <a href="Badminton.html">Badminton</a >
-	<a href="Beach Racket set.html">Beach racket set</a >
-	<a href="Pickleball.html">Pickleball</a >
-</div>
-</li>
-				<li><a href="about us.html" accesskey="3" title="">About Us</a></li>
-				<li><a href="workshop.html" accesskey="4" title="">Workshop</a></li>
-				<li><a href="contact us.html" accesskey="5" title="">Contact Us</a></li>
+          <a href=" " accesskey="2" title="">Products ▾</a >
+          <div class="my-dropdown-menu">
+            <!-- 建议后续重命名文件去除空格 Playground_ball.html -->
+            <a href="Basketball.html">Basketball</a >
+            <a href="Soccerball.html">Soccerball</a >
+            <a href="Volleyball.html">Volleyball</a >
+            <a href="Playground ball.html">Playground ball</a >
+            <a href="American football.html">American football</a >
+            <a href="Rugby ball.html">Rugby ball</a >
+            <a href="Handball.html">Handball</a >
+            <a href="Baseball.html">Baseball</a >
+            <a href="Tennis ball.html">Tennis ball</a >
+            <a href="Badminton.html">Badminton</a >
+            <a href="Beach Racket set.html">Beach racket set</a >
+            <a href="Pickleball.html">Pickleball</a >
+          </div>
+        </li>
+				<li><a href="about us.html" accesskey="3" title="">About Us</a ></li>
+				<li><a href="workshop.html" accesskey="4" title="">Workshop</a ></li>
+				<li><a href="contact us.html" accesskey="5" title="">Contact Us</a ></li>
 				<li class="lang-switch">
-  <a href="index.html" id="lang-en" class="lang-active">EN</a > | <a href="de/index.html" id="lang-de">DE</a >
-</li>
+          <a href="index.html" id="lang-en" class="lang-active">EN</a > | <a href="de/index.html" id="lang-de">DE</a >
+        </li>
 			</ul>
 		</div>
 	</div>
@@ -73,15 +159,17 @@ Released   : 20130631
 <div id="welcome" class="wrapper-style1">
 	<div class="title">
 		<h2>Welcome to TitanSportGear</h2>
-		<span class="byline">A professional manufacturer & exporter sporting goods</span> </div>
+		<span class="byline">A professional manufacturer & exporter sporting goods</span>
+	</div>
 	<p>We are dedicated to producing top-tier sporting goods with cutting-edge technology and premium materials. Our global export network ensures that athletes worldwide receive the finest equipment for basketball, soccer, and other field sports. Quality and innovation drive everything we create.</p >
 </div>
 <div id="page" class="container">
 	<div id="content">
 		<div class="title">
 			<h2>Unleash Your Athletic Potential</h2>
-</div>
-			<span class="image image-full"><img src="images/hero-bg.jpg" alt="" /></span> 		<p>At TitanSportGear, we are committed to delivering world-class sporting goods that inspire athletes to push their limits. Every basketball, soccer ball, and piece of protective gear we export is crafted using state-of-the-art manufacturing processes and rigorously tested for exceptional durability and control. We partner with teams and retailers worldwide to provide premium equipment that guarantees peak performance on any court or field.</p>
+		</div>
+		<span class="image image-full">< img src="images/hero-bg.jpg" alt="" /></span>
+		<p>At TitanSportGear, we are committed to delivering world-class sporting goods that inspire athletes to push their limits. Every basketball, soccer ball, and piece of protective gear we export is crafted using state-of-the-art manufacturing processes and rigorously tested for exceptional durability and control. We partner with teams and retailers worldwide to provide premium equipment that guarantees peak performance on any court or field.</p >
 		<h3>&nbsp;</h3>
 		<h3>About TSG</h3>
 		<p>TitanSportGear (TSG) is a premier, world-class manufacturer and exporter specializing in high-quality sports balls and professional athletic equipment. With over 20 years of industry experience, our state-of-the-art production facility utilizes advanced manufacturing technologies and premium, eco-friendly raw materials to ensure every product delivers superior durability, precision, and performance. We strictly adhere to international quality control standards, making us a trusted OEM/ODM partner for professional teams, global brands, and sports retailers across North America, Europe, and Asia. From custom branding to seamless global logistics, TSG is dedicated to supporting your business growth with reliable supply chains and exceptional customer service.</p >
@@ -92,13 +180,13 @@ Released   : 20130631
 				<h2>Our main Products</h2>
 			</div>
 			<ul class="style2">
-				<li><a href="#">Basketballs</a></li>
-				<li><a href="#">Soccerballs</a></li>
-				<li><a href="#">Volleyballs</a></li>
-				<li><a href="#">Racquets</a></li>
-				<li><a href="#">Sports Protective Gear</a></li>
-				<li><a href="#">Training Accessories</a></li>
-				<li><a href="#">Global Shipping Info</a></li>
+				<li><a href="#">Basketballs</a ></li>
+				<li><a href="#">Soccerballs</a ></li>
+				<li><a href="#">Volleyballs</a ></li>
+				<li><a href="#">Racquets</a ></li>
+				<li><a href="#">Sports Protective Gear</a ></li>
+				<li><a href="#">Training Accessories</a ></li>
+				<li><a href="#">Global Shipping Info</a ></li>
 			</ul>
 		</div>
 		<div id="sbox2">
@@ -106,9 +194,9 @@ Released   : 20130631
 				<h2>Why Choose TSG</h2>
 			</div>
 			<ul class="style2">
-				<li><a href="#">20+Years Export Experience</a></li>
-				<li><a href="#">Eco-Friendly & Durable Materials</a></li>
-				<li><a href="#">Strict Global Quality Control</a></li>
+				<li><a href="#">20+Years Export Experience</a ></li>
+				<li><a href="#">Eco-Friendly & Durable Materials</a ></li>
+				<li><a href="#">Strict Global Quality Control</a ></li>
 			</ul>
 		</div>
 	</div>
@@ -120,11 +208,11 @@ Released   : 20130631
 				<h2>Global Logistics</h2>
 			</div>
 			<ul class="style1">
-				<li class="first"><a href="#">Fast Ocean & Air Freight</a></li>
-				<li><a href="#">Real-time Cargo Tracking</a></li>
-				<li><a href="#">Customs Clearance Support</a></li>
-				<li><a href="#">Secure Protective Packaging</a></li>
-				<li><a href="#">Door to Door Delivery</a></li>
+				<li class="first"><a href="#">Fast Ocean & Air Freight</a ></li>
+				<li><a href="#">Real-time Cargo Tracking</a ></li>
+				<li><a href="#">Customs Clearance Support</a ></li>
+				<li><a href="#">Secure Protective Packaging</a ></li>
+				<li><a href="#">Door to Door Delivery</a ></li>
 			</ul>
 		</div>
 		<div id="box2">
@@ -132,11 +220,11 @@ Released   : 20130631
 				<h2>Quality Assurance</h2>
 			</div>
 			<ul class="style1">
-				<li class="first"><a href="#">Premium Eco-Raw Materials</a></li>
-				<li><a href="#">Strict 100% QC Inspection</a></li>
-				<li><a href="#">International Standards Certificated</a></li>
-				<li><a href="#">Durability & Pressure Tested</a></li>
-				<li><a href="#">Defective Product Replacement</a></li>
+				<li class="first"><a href="#">Premium Eco-Raw Materials</a ></li>
+				<li><a href="#">Strict 100% QC Inspection</a ></li>
+				<li><a href="#">International Standards Certificated</a ></li>
+				<li><a href="#">Durability & Pressure Tested</a ></li>
+				<li><a href="#">Defective Product Replacement</a ></li>
 			</ul>
 		</div>
 		<div id="box3">
@@ -144,11 +232,11 @@ Released   : 20130631
 				<h2>OEM &ODM Services</h2>
 			</div>
 			<ul class="style1">
-				<li class="first"><a href="#">Custom Logo & Brand Printing</a></li>
-				<li><a href="#">Personalized Color & Size Options</a></li>
-				<li><a href="#">Professional Design Team support</a></li>
-				<li><a href="#">Flexible Minium Order Quantity(MOQ)</a></li>
-				<li><a href="#">Fast Prototype Sample Making</a></li>
+				<li class="first"><a href="#">Custom Logo & Brand Printing</a ></li>
+				<li><a href="#">Personalized Color & Size Options</a ></li>
+				<li><a href="#">Professional Design Team support</a ></li>
+				<li><a href="#">Flexible Minium Order Quantity(MOQ)</a ></li>
+				<li><a href="#">Fast Prototype Sample Making</a ></li>
 			</ul>
 		</div>
 	</div>
@@ -157,142 +245,37 @@ Released   : 20130631
 	<div>
 		<div class="title">
 			<h2>Get in touch</h2>
-			<span class="byline">We welcome global buyers and partners. Send us your inquiry today, and we will reply within 24 hours!</span> </div>
+			<span class="byline">We welcome global buyers and partners. Send us your inquiry today, and we will reply within 24 hours!</span>
+		</div>
 		<ul class="contact">
 			<p style="text-align: center; color: #fff; line-height: 3.5; text-transform: none !important;">
   WhatsApp: charleytian<br>
-  Wechat:13182822839<br>			
+  Wechat:13182822839<br>
   Email: charleytian@gmail.com<br>
-  Telephone: 0086 013182822839
+  Telephone: 0086 13182822839
 </p >
 		</ul>
 	</div>
-	<p>&copy; 2026 TitanSportGear. All rights reserved.</p>
-</div>
-</body>
-</html>
-<style>
-  /* 让导航栏的列表项具备定位能力 */
-  #menu ul li {
-    position: relative !important;
-  }
-  /* 默认把下拉框藏起来 */
-  .my-dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;                  /* 刚好在 Products 正下方 */
-    left: 50%;
-    transform: translateX(-50%);/* 居中对齐 */
-    background-color: #fff176;  /* 弹窗背景为白色 */
-    min-width: 160px;           /* 菜单宽度 */
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2); /* 加个高级的阴影 */
-    padding: 5px 0;
-    z-index: 9999;              /* 保证显示在最上层 */
-    border-radius: 4px;         /* 微微的圆角 */
-	max-height: 350px;   /* 限制下拉菜单的最大高度，10个选项不会冲出屏幕 */
-overflow-y: auto;    /* 选项过多时，菜单内部会自动出现上下滚动条 */
-  }
-
-  /* 下拉菜单里面每一行字的样式 */
-  .my-dropdown-menu a {
-    display: block !important;
-    color: #333333 !important;  /* 弹窗里的文字用深灰色，保证白底黑字清晰 */
-    padding: 10px 15px !important;
-    font-size: 12px !important; /* 字号稍微缩小一点 */
-    text-transform: none !important; /* 允许大小写 */
-    font-weight: normal !important;  /* 不加粗 */
-    text-align: center !important;   /* 文字居中 */
-    text-decoration: none !important;
-    border-bottom: 1px solid #eee;   /* 每行之间的小分隔线 */
-    background: none !important;     /* 清除可能继承的背景 */
-  }
-  .my-dropdown-menu a:last-child { border-bottom: none; }
-
-  /* 鼠标放到下拉选项上时，背景变灰、字变黑 */
-  .my-dropdown-menu a:hover { 
-    background-color: #f5f5f5 !important; 
-    color: #000000 !important; 
-  }
-
-  /* 💡 核心：当鼠标悬停在 Products 上时，展现下拉菜单 */
-  .dropdown-item:hover .my-dropdown-menu {
-    display: block !important;
-  }
-	#header-wrapper {
-    position: relative; /* 赋予定位能力 */
-    z-index: 99999;     /* 设置极高的层级，绝对压过下方的黑色大图 */
-}
-	#welcome {
-    position: relative;    /* 赋予它层级控制能力 */
-    z-index: 1 !important; /* 把它压到最底层，这样绝不会挡住上面的菜单 */
-}
-	/* 强行解除所有父级盒子的溢出隐藏限制 */
-#header-wrapper, 
-#header, 
-#menu, 
-.dropdown-item {
-    overflow: visible !important;
-}
-</style>
-<!-- ========================================== -->
-<!-- 1. 弹窗 HTML 结构（用于承载放大图片和描述） -->
-<!-- ========================================== -->
-<div id="imageModal" class="modal" onclick="closeModal()">
-    <div class="modal-content" onclick="event.stopPropagation()">
-        <span class="close-btn" onclick="closeModal()">&times;</span>
-        <!-- 这里是存放放大后大图的地方 -->
-        <div id="modalImgContainer">
-            <img id="modalImg"src=""alt="放大图片"style="max-width: 100%; max-height:70vh; object-fit:contain;"/>
-        </div>
-        <!-- 下方产品说明/描述空行区域 -->
-        <div id="modalDescription" class="modal-desc"></div>
-    </div>
+	<p>&copy; 2026 TitanSportGear. All rights reserved.</p >
 </div>
 
-<!-- ========================================== -->
-<!-- 2. 升级版 JavaScript 脚本逻辑（强行渲染图片） -->
-<!-- ========================================== -->
 <script type="text/javascript">
-   function openModal(imgElement) {
+function openModal(imgElement) {
     const modal = document.getElementById("imageModal");
     const container = document.getElementById("modalImgContainer");
     const modalDesc = document.getElementById("modalDescription");
 
-    // 1. 显示大弹窗
     modal.style.display = "flex";
-
-    // 2. 核心修改：外层用单引号，内层用双引号，彻底避免转义失败
     container.innerHTML = '<img id="modalImg" src="' + imgElement.src + '" alt="放大图片" style="max-width: 100%; max-height: 70vh; object-fit: contain;"/>';
 
-    // 3. 设置下方的产品标题和描述
     const productTitle = imgElement.alt;
-    modalDesc.innerText = productTitle + " - \n\n 这是一款品牌的专业运动装备。采用优秀耐用材质，工艺精湛，控球极其精准，握感舒适。";
+    modalDesc.innerText = productTitle + " - \n\n This is professional sports equipment. Made of premium durable material, precise control and comfortable grip.";
 }
-    // 关闭弹窗的函数
-    function closeModal() {
-        document.getElementById("imageModal").style.display = "none";
-    }
-	<!-- 1. 您的顶部导航栏（门楣） -->
-<header class="site-header">
-  <div class="nav-container">
-    <div class="logo">COMPANY</div>
-    <nav class="nav-menu">
-      <a href=" " class="nav-link">首页</a >
-      <!-- 触发按钮，注意：不要写 href="contact us.html"，我们要用 JS 拦截它 -->
-      <button id="about-us-btn" class="nav-link">About Us</button>
-    </nav>
-  </div>
 
-  <!-- 2. 正下方弹出的容器：直接内嵌您的 contact us.html -->
-  <div id="contact-panel" class="contact-dropdown">
-    <!-- src 直接指向您的独立静态文件 -->
-    <iframe src="contact us.html" class="contact-iframe" frameborder="0" scrolling="no"></iframe>
-  </div>
-</header>
-	<!-- ...前面是您的各类网页内容和刚刚加的 iframe 容器... -->
-    
-    <!-- 确保放在所有 HTML 标签的最后面 -->
-    <script src="script.js"></script>
-  </body>
-</html>
+function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+}
 </script>
+
+</body>
+</html>
