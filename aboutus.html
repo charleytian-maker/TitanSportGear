@@ -6,7 +6,6 @@
 <meta name="description" content="About TitanSportGear - professional manufacturer & exporter of sporting goods, OEM/ODM available." />
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet" />
 <link href="default.css" rel="stylesheet" type="text/css" media="all" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 <style>
   /* 导航下拉菜单（与首页保持一致，header.html 注入后生效） */
   #menu ul li { position: relative !important; }
@@ -50,14 +49,13 @@
   body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background-color: #1C1C1C; /* 与全站黑色主题保持一致，footer 区域将自然继承此黑底 */
+    background-color: #ffffff;
     color: #333333;
   }
   .about-main {
     max-width: 1100px;
     margin: 0 auto;
     padding: 50px 40px 80px;
-    background-color: #ffffff; /* 中间内容区域单独维持白底黑字 */
   }
   .about-section {
     margin-bottom: 70px;
@@ -174,4 +172,82 @@
         <p class="section-subtitle">所用材料简介</p >
         <p class="placeholder-text">
             [占位文案] 这里介绍产品所用的主要材料（如 PVC/橡胶/碳纤维/复合材料等），
-            可以按产品类别分段说明
+            可以按产品类别分段说明，例如运动球类用什么材料、球拍用什么材料，
+            突出材料的耐用性、安全性或环保特性。
+        </p >
+    </section>
+
+    <!-- 4. 质量控制与认证 -->
+    <section class="about-section" id="quality-control">
+        <h2>Quality Control & Certifications</h2>
+        <p class="section-subtitle">质量控制与认证</p >
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h4>[占位] 生产质检流程</h4>
+                <p>这里描述从原料到成品的质检环节，比如来料检验、过程抽检、成品全检等。</p >
+            </div>
+            <div class="feature-card">
+                <h4>[占位] 认证资质</h4>
+                <p>这里列出已获得的认证（如 ISO、CE、SGS 检测报告等），可附证书图片。</p >
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. 客服支持 -->
+    <section class="about-section" id="customer-support">
+        <h2>Customer Support</h2>
+        <p class="section-subtitle">客服支持</p >
+        <p class="placeholder-text">
+            [占位文案] 这里说明你的客服响应时间、服务语言（中/英/德）、
+            售后处理方式（退换货、质量问题处理流程）等，建立买家信任感。
+        </p >
+    </section>
+
+    <!-- 6. 品牌定制与加工服务 -->
+    <section class="about-section" id="oem-services">
+        <h2>OEM/ODM & Branding Services</h2>
+        <p class="section-subtitle">品牌定制与加工服务</p >
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h4>Custom Logo & Brand Printing</h4>
+                <p>[占位文案] 支持客户品牌 Logo 印刷/烫印，可附实际案例图。</p >
+            </div>
+            <div class="feature-card">
+                <h4>Personalized Color & Size Options</h4>
+                <p>[占位文案] 支持颜色、尺寸定制，满足不同市场需求。</p >
+            </div>
+            <div class="feature-card">
+                <h4>Professional Design Team Support</h4>
+                <p>[占位文案] 提供专业设计团队支持，协助客户完成包装/外观设计。</p >
+            </div>
+            <div class="feature-card">
+                <h4>Flexible Minimum Order Quantity (MOQ)</h4>
+                <p>[占位文案] 说明起订量政策，是否支持小批量测试订单。</p >
+            </div>
+            <div class="feature-card">
+                <h4>Fast Prototype Sample Making</h4>
+                <p>[占位文案] 说明打样周期，是否可加急。</p >
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. 运输与保障 -->
+    <section class="about-section" id="shipping">
+        <h2>Shipping & Guarantee</h2>
+        <p class="section-subtitle">运输与保障</p >
+        <p class="placeholder-text">
+            [占位文案] 这里说明常用运输方式（海运/空运/快递专线如 SpeedPAK）、
+            大致运输时效、售后保障政策（质量问题如何处理、是否提供保险）等，
+            降低海外买家的下单顾虑。
+        </p >
+    </section>
+
+</main>
+
+<!-- 页脚由 load-footer.js 动态注入到这里 -->
+<div id="footer-placeholder"></div>
+
+<script src="/load-header.js"></script>
+<script src="/load-footer.js"></script>
+</body>
+</html>
