@@ -54,12 +54,13 @@
     color: #333333;
   }
   .about-main {
-  min-height: calc(100vh - 200px);
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 50px 40px 80px;
-  background-color: #ffffff;
-}
+    background-color: #ffffff; /* 铺满左右两侧，白底黑字 */
+  }
+  .about-main-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 40px 80px;
+  }
   .about-section {
     margin-bottom: 70px;
   }
@@ -145,6 +146,7 @@
 <div id="header-placeholder"></div>
 
 <main class="about-main">
+  <div class="about-main-inner">
 
     <!-- 1. 公司介绍 -->
     <section class="about-section" id="company-intro">
@@ -245,6 +247,7 @@
         </p >
     </section>
 
+  </div>
 </main>
 
 <!-- 页脚由 load-footer.js 动态注入到这里 -->
