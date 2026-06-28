@@ -2163,7 +2163,7 @@ ul.contact li a.icon-rss:before
 
 /* 3. 让菜单里的子链接变成垂直排列 */
 .my-dropdown-menu a {
-    color: #000000;            /* 文字颜色 */
+    color: #ffffff;            /* 文字颜色 */
     padding: 10px 15px;        /* 内边距 */
     text-decoration: none;     /* 去掉下划线 */
     display: block;            /* 关键：变成块级元素，单独占一行 */
@@ -2171,7 +2171,7 @@ ul.contact li a.icon-rss:before
 
 /* 4. 鼠标悬停在子菜单上时的变色效果（可选） */
 .my-dropdown-menu a:hover {
-    background-color: #ffffff; /* 鼠标放上去时颜色变深一点 */
+    background-color: #1f8c8c; /* 鼠标放上去时颜色变深一点 */
 }
 
 /* 5. 核心触发器：当鼠标放到 Products 上时，把菜单显示出来 */
