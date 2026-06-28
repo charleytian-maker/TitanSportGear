@@ -1,6 +1,11 @@
-/ ===========================================================
-// 统一加载导航栏 header.html，并在加载完成后绑定语言切换 / 菜单逻辑
-// 把这段放在 script.js 最前面，或者作为单独的 load-header.js 引入
+// ===========================================================
+// 统一加载导航栏 header.html
+// 加载完成后绑定语言切换逻辑，并处理锚点跳转定位
+//
+// 使用前提：页面 body 内必须有一个容器：
+//   <div id="header-placeholder"></div>
+// 如果容器不存在或 id 拼写错误，本脚本会在控制台报错提示，
+// 不会让整个脚本崩溃中断。
 // ===========================================================
 
 fetch('/header.html')
@@ -8,9 +13,16 @@ fetch('/header.html')
     return response.text();
   })
   .then(function(html) {
-    document.getElementById('header-placeholder').innerHTML = html;
+    var placeholder = document.getElementById('header-placeholder');
+
+    if (!placeholder) {
+      console.error('load-header.js: 未找到 header-placeholder 容器，门楣无法注入，请检查本页面是否有该 div。');
+      return;
+    }
+
+    placeholder.innerHTML = html;
     initHeaderLogic();
-    scrollToAnchorAfterHeaderLoad(); // 门楣插入完成、页面高度撑开后，再处理锚点跳转
+    scrollToAnchorAfterHeaderLoad();
   })
   .catch(function(err) {
     console.error('导航栏加载失败:', err);
@@ -24,6 +36,11 @@ function initHeaderLogic() {
   var enLink = document.getElementById('lang-en');
   var deLink = document.getElementById('lang-de');
 
+  if (!enLink || !deLink) {
+    console.error('load-header.js: 未找到语言切换链接 lang-en 或 lang-de，语言切换逻辑跳过。');
+    return;
+  }
+
   if (isGerman) {
     deLink.classList.add('lang-active');
     enLink.classList.remove('lang-active');
@@ -35,25 +52,20 @@ function initHeaderLogic() {
     enLink.href = '/' + fileName;
     deLink.href = '/de/' + fileName;
   }
-
-  // 如果以后想给 Contact Us 做下拉菜单不想直接跳转，
-  // 可以在这里加 addEventListener。目前 Contact Us 是直接跳转链接，不需要额外绑定。
 }
 
 // ===========================================================
-// 锚点跳转修复：
-// 由于门楣是异步 fetch 注入的，浏览器在页面初次渲染时尝试的锚点定位
-// 往往会失败（此时门楣还没插入，页面高度还没撑开）。
-// 这里等门楣插入完成后，再手动滚动到 URL 中的 #锚点 位置一次。
+// 锚点跳转修复
+// 门楣是异步注入的，浏览器初次渲染时的锚点定位常常会失败
+// 因此在门楣插入完成后，手动滚动到 URL 中的锚点位置一次
 // ===========================================================
 function scrollToAnchorAfterHeaderLoad() {
   if (!window.location.hash) return;
 
-  var targetId = window.location.hash.substring(1); // 去掉开头的 #
+  var targetId = window.location.hash.substring(1);
   var targetEl = document.getElementById(targetId);
   if (!targetEl) return;
 
-  // 用 requestAnimationFrame 确保浏览器已经完成一次布局计算（门楣高度已生效）
   requestAnimationFrame(function() {
     targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
