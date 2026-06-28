@@ -1,72 +1,98 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <title>contact us</title>
-    <style>
-        /* 针对下拉框环境进行的特殊样式优化 */
-        body {
-            margin: 0;
-            padding: 30px 40px; /* 四周留出精美的边距 */
-            background-color: #ffffff; /* 确保背景是纯白 */
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        }
+<meta charset="UTF-8">
+<title>Contact Us - TitanSportGear</title>
+<meta name="description" content="Contact TitanSportGear - professional manufacturer & exporter of sporting goods." />
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<style>
+  /* 导航下拉菜单（与首页保持一致，header.html 注入后生效） */
+  #menu ul li { position: relative !important; }
+  .my-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff176;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    padding: 5px 0;
+    z-index: 9999;
+    border-radius: 4px;
+    max-height: 350px;
+    overflow-y: auto;
+  }
+  .my-dropdown-menu a {
+    display: block !important;
+    color: #333333 !important;
+    padding: 10px 15px !important;
+    font-size: 12px !important;
+    text-transform: none !important;
+    font-weight: normal !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid #eee;
+    background: none !important;
+  }
+  .my-dropdown-menu a:last-child { border-bottom: none; }
+  .my-dropdown-menu a:hover {
+    background-color: #f5f5f5 !important;
+    color: #000000 !important;
+  }
+  .dropdown-item:hover .my-dropdown-menu { display: block !important; }
+  #header-wrapper, #header, #menu, .dropdown-item { overflow: visible !important; }
+  #header-wrapper { position: relative; z-index: 99999; }
 
-        /* 使用三列网格排版，让电话、邮箱、地址横向并排 */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .contact-box {
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-        }
-
-        .icon {
-            font-size: 26px;
-            line-height: 1;
-        }
-
-        .details h4 {
-            margin: 0 0 8px 0;
-            color: #1a1f2c;
-            font-size: 16px;
-            font-weight: 600;
-        }
-
-        .details p {
-            margin: 0;
-            color: #606f7b;
-            font-size: 14px;
-            line-height: 1.6;
-        }
-    </style>
+  /* 联系方式页面内容样式 */
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  .contact-main {
+    min-height: calc(100vh - 200px); /* 200px 为门楣+footer 预留高度，可按实际调整 */
+    padding: 60px 40px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .contact-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .icon { font-size: 26px; line-height: 1; }
+  .details h4 {
+    margin: 0 0 8px 0;
+    color: #1a1f2c;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .details p {
+    margin: 0;
+    color: #606f7b;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+</style>
 </head>
 <body>
-    <!-- 1. 首页门楣区域 (保留里面所有内容) -->
-<header id="header-container">
-    <!-- 这里存放你从首页复制过来的门楣内容，如 Logo、导航栏等 -->
-    <!-- 注意：图片左侧有一个 load-header.js，如果你是用 JS 动态加载门楣，请确保保留该脚本 -->
-</header>
 
-<!-- 2. 联系方式区域 (完全独立并移到下方) -->
+<!-- 门楣由 load-header.js 动态注入到这里 -->
+<div id="header-placeholder"></div>
+
 <main class="contact-main">
     <div class="contact-grid">
-        <!-- 你的联系方式内容 (电话、邮箱、地址等) -->
-        <div class="contact-box">...</div>
-        <div class="contact-box">...</div>
-    </div>
-</main>
 
-    <!-- 核心联系方式内容 -->
-    <div class="contact-grid">
-        
-        <!-- 电话区 -->
         <div class="contact-box">
             <div class="icon">📞</div>
             <div class="details">
@@ -76,7 +102,6 @@
             </div>
         </div>
 
-        <!-- 邮箱区 -->
         <div class="contact-box">
             <div class="icon">✉️</div>
             <div class="details">
@@ -86,16 +111,17 @@
             </div>
         </div>
 
-        <!-- 地址区 -->
         <div class="contact-box">
             <div class="icon">📍</div>
             <div class="details">
                 <h4>Address</h4>
-                <p>Room102 #1 building #66 Yangxin Rd,Liuhe District Nanjing Jiangsu Province China </p >
+                <p>Room102 #1 building #66 Yangxin Rd, Liuhe District, Nanjing, Jiangsu Province, China</p >
             </div>
         </div>
 
     </div>
+</main>
 
+<script src="/load-header.js"></script>
 </body>
 </html>
