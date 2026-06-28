@@ -1,142 +1,72 @@
-<div id="footer" class="container">
-    <div>
-        <div class="title">
-            <h2>Get in touch</h2>
-            <span class="byline">We welcome global buyers and partners. Send us your inquiry today, and we will reply within 24 hours!</span>
-        </div>
-        <ul class="contact contact-icons">
-            <li>
-                <a href=" " target="_blank" rel="noopener" title="WhatsApp" aria-label="WhatsApp">
-                    <i class="fa-brands fa-whatsapp"></i>
-                </a >
-            </li>
-            <li>
-                <a href="#" onclick="openWechatModal(); return false;" title="WeChat" aria-label="WeChat">
-                    <i class="fa-brands fa-weixin"></i>
-                </a >
-            </li>
-            <li>
-                <a href="mailto:charleytian@gmail.com" title="Email" aria-label="Email">
-                    <i class="fa-solid fa-envelope"></i>
-                </a >
-            </li>
-            <li>
-                <a href="#" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook">
-                    <!-- 占位链接，替换为你的 Facebook 主页地址 -->
-                    <i class="fa-brands fa-facebook"></i>
-                </a >
-            </li>
-            <li>
-                <a href="#" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram">
-                    <!-- 占位链接，替换为你的 Instagram 主页地址 -->
-                    <i class="fa-brands fa-instagram"></i>
-                </a >
-            </li>
-            <li>
-                <a href="#" target="_blank" rel="noopener" title="Messenger" aria-label="Messenger">
-                    <!-- 占位链接，替换为你的 Messenger 地址，如 https://m.me/你的用户名 -->
-                    <i class="fa-brands fa-facebook-messenger"></i>
-                </a >
-            </li>
-        </ul>
-    </div>
-    <p>&copy; 2026 TitanSportGear. All rights reserved.</p >
-</div>
+// ===========================================================
+// 统一加载导航栏 header.html
+// 加载完成后绑定语言切换逻辑，并处理锚点跳转定位
+//
+// 使用前提：页面 body 内必须有一个容器：
+//   <div id="header-placeholder"></div>
+// 如果容器不存在或 id 拼写错误，本脚本会在控制台报错提示，
+// 不会让整个脚本崩溃中断。
+// ===========================================================
 
-<!-- 微信二维码弹窗 -->
-<div id="wechatModal" class="wechat-modal" onclick="closeWechatModal()">
-    <div class="wechat-modal-content" onclick="event.stopPropagation()">
-        <span class="wechat-modal-close" onclick="closeWechatModal()">&times;</span>
-        <!-- 占位图片路径，替换为你自己的微信二维码图片 -->
-        < img src="images/wechat-qrcode.jpg" alt="WeChat QR Code" />
-        <p>Scan to add us on WeChat</p >
-    </div>
-</div>
+fetch('/header.html')
+  .then(function(response) {
+    return response.text();
+  })
+  .then(function(html) {
+    var placeholder = document.getElementById('header-placeholder');
 
-<style>
-  /* 联系方式图标 */
-  .contact-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 22px;
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-  }
-  .contact-icons li a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background-color: rgba(255,255,255,0.08);
-    color: #fff;
-    font-size: 20px;
-    text-decoration: none;
-    transition: background-color 0.2s ease, transform 0.2s ease;
-  }
-  .contact-icons li a:hover {
-    background-color: #fff176;
-    color: #1a1f2c;
-    transform: translateY(-2px);
+    if (!placeholder) {
+      console.error('load-header.js: 未找到 header-placeholder 容器，门楣无法注入，请检查本页面是否有该 div。');
+      return;
+    }
+
+    placeholder.innerHTML = html;
+    initHeaderLogic();
+    scrollToAnchorAfterHeaderLoad();
+  })
+  .catch(function(err) {
+    console.error('导航栏加载失败:', err);
+  });
+
+function initHeaderLogic() {
+  var path = window.location.pathname;
+  var fileName = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
+  var isGerman = path.indexOf('/de/') === 0 || path.indexOf('/de/') > -1;
+
+  var enLink = document.getElementById('lang-en');
+  var deLink = document.getElementById('lang-de');
+
+  if (!enLink || !deLink) {
+    console.error('load-header.js: 未找到语言切换链接 lang-en 或 lang-de，语言切换逻辑跳过。');
+    return;
   }
 
-  /* 微信二维码弹窗样式 */
-  .wechat-modal {
-    display: none;
-    position: fixed;
-    z-index: 999999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.85);
-    align-items: center;
-    justify-content: center;
+  if (isGerman) {
+    deLink.classList.add('lang-active');
+    enLink.classList.remove('lang-active');
+    enLink.href = '/' + fileName;
+    deLink.href = '/de/' + fileName;
+  } else {
+    enLink.classList.add('lang-active');
+    deLink.classList.remove('lang-active');
+    enLink.href = '/' + fileName;
+    deLink.href = '/de/' + fileName;
   }
-  .wechat-modal.active {
-    display: flex;
-  }
-  .wechat-modal-content {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 24px;
-    text-align: center;
-    max-width: 90%;
-    position: relative;
-  }
-  .wechat-modal-content img {
-    width: 220px;
-    height: 220px;
-    object-fit: contain;
-    border-radius: 6px;
-  }
-  .wechat-modal-content p {
-    margin: 12px 0 0 0;
-    color: #333;
-    font-size: 14px;
-  }
-  .wechat-modal-close {
-    position: absolute;
-    top: 8px;
-    right: 14px;
-    font-size: 24px;
-    color: #999;
-    cursor: pointer;
-    line-height: 1;
-  }
-  .wechat-modal-close:hover {
-    color: #333;
-  }
-</style>
+}
 
-<script>
-  function openWechatModal() {
-    document.getElementById('wechatModal').classList.add('active');
-  }
-  function closeWechatModal() {
-    document.getElementById('wechatModal').classList.remove('active');
-  }
-</script>
+// ===========================================================
+// 锚点跳转修复
+// 门楣是异步注入的，浏览器初次渲染时的锚点定位常常会失败
+// 因此在门楣插入完成后，手动滚动到 URL 中的锚点位置一次
+// ===========================================================
+function scrollToAnchorAfterHeaderLoad() {
+  if (!window.location.hash) return;
+
+  var targetId = window.location.hash.substring(1);
+  var targetEl = document.getElementById(targetId);
+  if (!targetEl) return;
+
+  requestAnimationFrame(function() {
+    targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+}
