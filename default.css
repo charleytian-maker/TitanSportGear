@@ -2255,7 +2255,7 @@ ul.contact li a.icon-rss:before
     top: 100%;                  /* 刚好在 Products 正下方 */
     left: 50%;
     transform: translateX(-50%);/* 居中对齐 */
-    background-color: #fff176;  /* 弹窗背景为白色 */
+    background-color: #00B0B3;  /* 弹窗背景为白色 */
     min-width: 160px;           /* 菜单宽度 */
     box-shadow: 0px 8px 16px rgba(0,0,0,0.2); /* 加个高级的阴影 */
     padding: 5px 0;
