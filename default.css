@@ -2233,7 +2233,7 @@ ul.contact li a.icon-rss:before
 }
 #menu .lang-switch {
   float: right;
-  padding: 0.8em 1.5em;
+  padding: 60px 1.5em 0 1.5em !important;
 }
 #menu .lang-switch a {
   color: #000000;
