@@ -1920,10 +1920,8 @@ ul.contact li a.icon-rss:before
 	#menu
 {
 	position: absolute;
-	left:0;
-	width:100%;
-	top: 15em;
-	text-align:10px;
+	left:70%;
+	top: 7em;
 }
 
 .homepage #menu
