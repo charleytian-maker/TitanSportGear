@@ -1841,7 +1841,7 @@ ul.contact li a.icon-rss:before
 	display: block;
 	width: 100%;
 	height:auto;
-	max-height:150px;
+	max-height:300px;
 	object-fit:cover;
 }
 .image-full
