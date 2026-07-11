@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="canonical" href="https://www.titansportgear.com/aboutus.html" />
+<meta charset="UTF-8">
+<title>About Us - TitanSportGear</title>
+<meta name="description" content="About TitanSportGear - professional manufacturer & exporter of sporting goods, OEM/ODM available." />
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<style>
+  /* 导航下拉菜单（与首页保持一致，header.html 注入后生效） */
+  #menu ul li { position: relative !important; }
+  .my-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #28a8a8;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    padding: 5px 0;
+    z-index: 9999;
+    border-radius: 4px;
+    max-height: 350px;
+    overflow-y: auto;
+  }
+  .my-dropdown-menu a {
+    display: block !important;
+    color: #ffffff !important;
+    padding: 10px 15px !important;
+    font-size: 12px !important;
+    text-transform: none !important;
+    font-weight: normal !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid #eee;
+    background: none !important;
+  }
+  .my-dropdown-menu a:last-child { border-bottom: none; }
+  .my-dropdown-menu a:hover {
+    background-color: #1f8c8c !important;
+    color: #000000 !important;
+  }
+  .dropdown-item:hover .my-dropdown-menu { display: block !important; }
+  #header-wrapper, #header, #menu, .dropdown-item { overflow: visible !important; }
+  #header-wrapper { position: relative; z-index: 99999; }
+
+  /* About Us 页面内容样式 */
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #ffffff; /* 与全站黑色主题保持一致，footer 区域将自然继承此黑底 */
+    color: #333333;
+  }
+  .about-main {
+    background-color: #000000; /* 铺满左右两侧，白底黑字 */
+  }
+  .about-main-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 150px 40px 80px;
+    color:#ffffff;
+  }
+  .about-section {
+    margin-bottom: 70px;
+  }
+  .about-section h2 {
+    font-size: 26px;
+    color: #ffffff;
+    margin: 0 0 10px 0;
+    border-left: 5px solid #fff176;
+    padding-left: 14px;
+  }
+  .about-section .section-subtitle {
+    color: #b0c4de;
+    font-size: 14px;
+    margin: 0 0 25px 14px;
+  }
+  .about-section p {
+    color: #606f7b;
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 0 0 14px 0;
+  }
+
+  /* 占位文案样式，方便日后一眼识别需要替换的部分 */
+  .placeholder-text {
+    background-color: #fafafa;
+    border: 1px dashed #d0d5dd;
+    border-radius: 6px;
+    padding: 16px 18px;
+    color: #98a2b3;
+    font-style: italic;
+  }
+
+  /* 车间图片占位框 */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 10px;
+  }
+  .gallery-placeholder {
+    aspect-ratio: 4 / 3;
+    background-color: #f2f4f7;
+    border: 1px dashed #d0d5dd;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #98a2b3;
+    font-size: 13px;
+    text-align: center;
+    padding: 10px;
+  }
+
+  /* 卡片式栏目（材料 / 质控 / 服务 / 运输） */
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    margin-top: 10px;
+  }
+  .feature-card {
+    background-color: #fafbfc;
+    border: 1px solid #eaecf0;
+    border-radius: 8px;
+    padding: 22px;
+  }
+  .feature-card h4 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    color: #667085;
+  }
+  .feature-card p {
+    margin: 0;
+    font-size: 14px;
+    color: #667085;
+    line-height: 1.7;
+  }
+</style>
+</head>
+<body>
+
+<!-- 门楣由 load-header.js 动态注入到这里 -->
+<div id="header-placeholder"></div>
+
+<main class="about-main">
+  <div class="about-main-inner">
+
+    <!-- 1. 公司介绍 -->
+   <section class="about-section" id="company-intro">
+            <h2>Company Introduction</h2>
+            <p class="section-subtitle"></p >
+
+            <p class="placeholder-text">
+                TitanSportGear is a sporting goods brand specializing in ball sports equipment, pickleball paddles and sets, fishing lures and tackle, and pet products — built to serve players, retailers, and distributors across North America, Europe, and Australia. We are a foreign trade company with nearly ten years of experience exporting sports equipment from China to international markets.
+            </p >
+            <p class="placeholder-text">
+                What started as a traditional ball sports export business has grown into a focused, design-driven brand. As demand shifted, we shifted with it — investing in newer, fast-growing categories like pickleball, fishing gear, and pet products, while keeping the manufacturing relationships, quality control, and export expertise we built over the years.
+            </p >
+
+            <h3>Our Story</h3>
+            <p class="placeholder-text">
+                Sport brings people together, and the right equipment makes the game better. That belief drives everything we do at TitanSportGear. After years of supplying sports equipment to international buyers, we saw an opportunity: athletes and weekend players deserved gear that combined factory-direct pricing with genuine attention to performance and design — not just generic, mass-produced products.
+            </p >
+            <p class="placeholder-text">
+                So we built TitanSportGear to do exactly that: source, design, and deliver equipment that performs as well as it looks, backed by a team that understands both manufacturing and the markets we sell into.
+            </p >
+
+            <h3>What We Offer</h3>
+            <ul class="about-list">
+                <li><strong>Pickleball Paddles &amp; Sets</strong> — From entry-level sets to performance paddles for competitive play, our pickleball line is built for the sport's fast-growing community of players in the US, Canada, and Europe.</li>
+                <li><strong>Fishing Lures &amp; Tackle</strong> — A growing range of fishing lures and tackle designed for durability and performance on the water, for both casual anglers and serious enthusiasts.</li>
+                <li><strong>Ball Sports Equipment</strong> — Basketballs, volleyballs, and beach sports equipment backed by years of manufacturing and export experience in traditional ball sports categories.</li>
+                <li><strong>Pet Products</strong>  — We're expanding into pet products, bringing the same attention to quality and design to gear for the animals who are part of our customers' active lifestyles.</li>
+            </ul>
+            <p class="placeholder-text">
+                We supply both <strong>B2B buyers</strong> — retailers, distributors, and wholesalers looking for reliable supply chains and OEM/ODM options — and <strong>B2C customers</strong> shopping directly through our online storefronts.
+            </p >
+
+            <h3>Why Choose TitanSportGear</h3>
+            <ul class="about-list">
+                <li><strong>Factory-Direct Sourcing</strong> — Direct relationships with manufacturers mean competitive pricing without sacrificing quality.</li>
+                <li><strong>Export Experience You Can Trust</strong> — Nearly ten years of hands-on foreign trade experience shipping to North America, Europe, and Australia.</li>
+                <li><strong>OEM/ODM Available</strong> — Custom branding and private-label options for retailers and distributors.</li>
+                <li><strong>Responsive Communication</strong> — A team that understands international buyers' expectations around quality, timelines, and compliance.</li>
+                <li><strong>Compliance-Minded</strong> — Attentive to the regulatory requirements of the markets we ship to, including EU and US standards.</li>
+            </ul>
+
+            <h3>Markets We Serve</h3>
+            <p class="placeholder-text">
+                TitanSportGear ships to customers and business partners throughout the United States, Canada, the United Kingdom, Germany, and the wider European Union, and Australia, with growing distribution across multiple e-commerce platforms and marketplaces.
+            </p >
+
+            <h3>Our Commitment</h3>
+            <p class="placeholder-text">
+                We're a small, growing team — and that means every order matters to us. Whether you're a retailer placing a wholesale order or a player buying your first pickleball paddle set, we're committed to quality products, honest communication, and building long-term relationships with the people we work with.
+            </p >
+
+            <h3>Get in Touch</h3>
+            <p class="placeholder-text">
+                Looking for a reliable sporting goods supplier, or want to place a wholesale or custom OEM order? Contact TitanSportGear today — we'd love to talk about how we can support your business or get you the right gear for your game.
+            </p >
+        </section>
+    <!-- 2. 车间图片 -->
+    <section class="about-section" id="workshop">
+        <h2>Workshop Gallery</h2>
+        <p class="section-subtitle">车间图片</p >
+        <div class="gallery-grid">
+            <div class="gallery-placeholder">[占位图片 1]<br>替换为：images/workshop-1.jpg</div>
+            <div class="gallery-placeholder">[占位图片 2]<br>替换为：images/workshop-2.jpg</div>
+            <div class="gallery-placeholder">[占位图片 3]<br>替换为：images/workshop-3.jpg</div>
+            <div class="gallery-placeholder">[占位图片 4]<br>替换为：images/workshop-4.jpg</div>
+        </div>
+    </section>
+
+    <section class="about-section" id="materials">
+        <h2>Materials We Use</h2>
+        <p class="section-subtitle"></p >
+        <p class="placeholder-text">
+            We select premium raw materials tailored for different sporting goods categories to balance durability, performance and environmental friendliness.
+ 
+- Pickleball Paddles: We adopt high-strength carbon fiber, lightweight honeycomb polymer core and anti-abrasion surface coating, delivering strong impact resistance and stable hitting performance.
+
+- Sport Balls: Multi-layer composite leather, high-elastic inner rubber bladder and air-locking lining are applied, ensuring consistent bounce, soft touch and excellent air tightness under various scenarios.
+
+- Flying Discs & Outdoor Gear: Flexible impact-resistant PP composite materials are used, featuring good toughness, UV resistance and long service life for outdoor activities.
+ 
+All materials pass preliminary inspection before production. We prioritize wear resistance, safe composition and eco-friendly properties to meet global wholesale and customization demands.
+        </p >
+    </section>
+
+    <!-- 4. 质量控制与认证 -->
+    <section class="about-section" id="quality-control">
+        <h2>Quality Control & Certifications</h2>
+        <p class="section-subtitle"></p >
+        <div class="feature-grid">
+            <div class="feature-card">
+                <p>Strict quality control runs through the whole manufacturing process. We conduct incoming raw material inspection, random in-line sampling during production, and full inspection for finished goods before packaging. Defective items will be separated and reworked to keep consistent product quality for every shipment.</p >
+            </div>
+            <div class="feature-card">
+                <p>Our products comply with international safety standards. We have obtained relevant test reports such as SGS. We are able to arrange third-party testing according to customers’ market requirements to satisfy different regional import regulations.</p >
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. 客服支持 -->
+    <section class="about-section" id="customer-support">
+        <h2>Customer Support</h2>
+        <p class="section-subtitle"></p >
+        <p class="placeholder-text">
+        We provide multilingual customer service in English, German and Chinese.
+Our team strives to reply to all inquiries within 24 working hours.
+If you receive defective goods caused by production issues, please contact us with photos for after-sales solutions. We will actively communicate to handle quality complaints reasonably and safeguard your business interests.
+        </p >
+    </section>
+
+    <!-- 6. 品牌定制与加工服务 -->
+    <section class="about-section" id="oem-services">
+        <h2>OEM/ODM & Branding Services</h2>
+        <p class="section-subtitle"></p >
+        <div class="feature-grid">
+        <div class="feature-card">
+        <h3>Custom Logo & Brand Printing</h3>
+        <p>Support custom logo printing, silk printing and heat transfer printing on products. Custom brand packaging solutions are also available.</p >
+        </div>
+      <div class="feature-card">
+        <h4>Personalized Color & Size Options</h4>
+        <p>Custom product colors, sizes and specifications are acceptable to satisfy diverse market demands</p >
+      </div>
+      <div class="feature-card">
+        <h4>Professional Design Team Support</h4>
+        <p>Our in-house design team assists you with product appearance optimization and package artwork development</p >
+      </div>
+      <div class="feature-card">
+       <h4>Flexible Minimum Order Quantity (MOQ)</h4>
+       <p>Flexible MOQ policy is available. Small trial orders are welcomed for market testing.</p >
+      </div>
+      <div class="feature-card">
+        <h4>Fast Prototype Sample Making</h4>
+         <p>Quick sample production service. Rush sample orders can be arranged upon request</p >
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. 运输与保障 -->
+    <section class="about-section" id="shipping">
+        <h2>Shipping & Guarantee</h2>
+        <p class="section-subtitle"></p >
+        <p class="placeholder-text">
+      We offer multiple shipping solutions including sea freight, air freight and express lines such as SpeedPAK to match different order sizes and delivery schedules.
+Estimated transit time will be advised before shipment. Cargo insurance is available upon request.
+In case of manufacturing quality defects, please provide relevant evidence within the specified period. We will negotiate proper solutions to protect your business interests.</p >
+    </section>
+
+  </div>
+</main>
+
+<!-- 页脚由 load-footer.js 动态注入到这里 -->
+<div id="footer-placeholder"></div>
+
+<script src="/load-header.js"></script>
+<script src="/load-footer.js"></script>
+</body>
+</html>
