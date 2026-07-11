@@ -17,7 +17,7 @@ function openModal(imgElement) {
 // 2. 关闭弹窗的函数
 function closeModal() {
     document.getElementById("imageModal").style.display = "none";
-    
+}
 document.addEventListener('DOMContentLoaded'), function() {
   var path = window.location.pathname;
   var fileName = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded'), function() {
 
   var enLink = document.getElementById('lang-en');
   var deLink = document.getElementById('lang-de');
-
+}
   if (isGerman) {
     deLink.classList.add('lang-active');
     enLink.classList.remove('lang-active');
@@ -49,4 +49,4 @@ aboutBtn.addEventListener('click', function(event) {
 // 点击页面其他任何空白地方时，自动收起面板
 document.addEventListener('click', function() {
   contactPanel.classList.remove('is-active');
-});
+}); 
