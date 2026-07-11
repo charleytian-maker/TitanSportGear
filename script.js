@@ -18,7 +18,7 @@ function openModal(imgElement) {
 function closeModal() {
     document.getElementById("imageModal").style.display = "none";
     
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded'), function() {
   var path = window.location.pathname;
   var fileName = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
   var isGerman = path.indexOf('/de/') === 0 || path.indexOf('/de/') > -1;
