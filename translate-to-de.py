@@ -16,8 +16,8 @@ import hashlib
 import requests 
 from bs4 import BeautifulSoup, NavigableString, Comment 
 # ========== 在这里填入你的百度翻译 APP ID 和密钥 ========== 
-BAIDU_APP_ID = "你的APP_ID" 
-BAIDU_SECRET_KEY = "你的密钥" 
+BAIDU_APP_ID = "20260708002644594" 
+BAIDU_SECRET_KEY = "chpLCJJ80ondL3D7bAPh" 
 # ========================================================== 
 BAIDU_API_URL = "https://fanyi-api.baidu.com/api/trans/vip/translate" 
 # 不翻译这些标签内部的文字（脚本、样式、代码等） 
@@ -122,7 +122,7 @@ def translate_html_file(input_path, output_path):
     print(f"\n完成！已保存到: {output_path}") 
 
     print("提醒：机器翻译仅供初稿参考，建议找懂德语的人再校对一遍关键页面（首页、About、Contact）。") 
-    
+
 f __name__ == "__main__":
     if len(sys.argv) != 3:
         print("用法: python translate_to_de.py 输入的英文html 输出的德文html")
