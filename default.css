@@ -1,3 +1,6 @@
+@view-transition {
+  navigation: none;
+}
 @charset 'UTF-8';
 
 @font-face
