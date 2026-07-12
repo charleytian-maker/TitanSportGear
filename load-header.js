@@ -8,7 +8,10 @@
 // 不会让整个脚本崩溃中断。
 // ===========================================================
 
-fetch('/header.html')
+var isGermanPage = window.location.pathname.indexOf('/de/') > -1;
+var headerFile = isGermanPage ? '/header_de.html' : '/header.html';
+
+fetch(headerFile)
   .then(function(response) {
     return response.text();
   })
