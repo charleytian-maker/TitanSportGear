@@ -211,7 +211,6 @@
 
 <script>
 function openModal(imgElement) {
-  document.getElementById("imageModal").style.display = "none";
   const modal = document.getElementById("imageModal");
   const modalImg = document.getElementById("modalImg");
   const modalDesc = document.getElementById("modalDescription");
@@ -223,6 +222,9 @@ function openModal(imgElement) {
   const productDesc = imgElement.dataset.desc || "暂无产品说明";
 
   modalDesc.innerText = productTitle + "\n\n" + productDesc;
+}
+function closeModal() {
+  document.getElementById("imageModal").style.display = "none";
 }
 </script>
 </body>
