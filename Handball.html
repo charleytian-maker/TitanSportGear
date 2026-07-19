@@ -221,19 +221,18 @@
 <script>
   // 打开弹窗的函数
   function openModal(imgElement) {
-    const modal = document.getElementById("imageModal");
-    const modalImg = document.getElementById("modalImg");
-    const modalDesc = document.getElementById("modalDescription");
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImg");
+  const modalDesc = document.getElementById("modalDescription");
 
-    modal.style.display = "flex"; // 显示弹窗
-    modalImg.src = imgElement.src; // 让大图的路径等于当前点击的小图路径
-    
-    // 获取小图自带的 alt 属性文字（例如 "Pickleball set 1"）
-    const productTitle = imgElement.alt;
-    
-    // 【自定义描述】您可以在下方自由修改这句产品介绍文字
-    modalDesc.innerText = productTitle + " \n\n This is a professional pickleball set designed for advanced players. Made of T700 carbon fiber, it offers precise ball control and a comfortable grip. The set includes 2 high-quality paddles, 4 professional outdoor balls, and a portable carrying bag."; 
-  }
+  modal.style.display = "flex";
+  modalImg.src = imgElement.src;
+
+  const productTitle = imgElement.alt;
+  const productDesc = imgElement.dataset.desc || "暂无产品说明";
+
+  modalDesc.innerText = productTitle + "\n\n" + productDesc;
+}
 
   // 关闭弹窗的函数
   function closeModal() {
