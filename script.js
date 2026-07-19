@@ -18,14 +18,14 @@ function openModal(imgElement) {
 function closeModal() {
     document.getElementById("imageModal").style.display = "none";
 }
-document.addEventListener('DOMContentLoaded'), function() {
+document.addEventListener('DOMContentLoaded', function() {
   var path = window.location.pathname;
   var fileName = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
   var isGerman = path.indexOf('/de/') === 0 || path.indexOf('/de/') > -1;
 
   var enLink = document.getElementById('lang-en');
   var deLink = document.getElementById('lang-de');
-}
+
   if (isGerman) {
     deLink.classList.add('lang-active');
     enLink.classList.remove('lang-active');
