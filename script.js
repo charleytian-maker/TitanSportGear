@@ -49,4 +49,12 @@ aboutBtn.addEventListener('click', function(event) {
 // 点击页面其他任何空白地方时，自动收起面板
 document.addEventListener('click', function() {
   contactPanel.classList.remove('is-active');
+  
 }); 
+function openWechatModal() {
+  document.getElementById('wechatModal').style.display = 'flex';
+}
+
+function closeWechatModal() {
+  document.getElementById('wechatModal').style.display = 'none';
+}
