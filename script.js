@@ -51,6 +51,7 @@ document.addEventListener('click', function() {
   contactPanel.classList.remove('is-active');
   
 }); 
+}); 
 function openWechatModal() {
   document.getElementById('wechatModal').style.display = 'flex';
 }
