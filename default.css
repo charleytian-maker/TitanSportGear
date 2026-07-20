@@ -2159,17 +2159,25 @@ ul.contact li a.icon-rss:before
 .dropdown-item {
     position: relative;
     display: inline-block;
+	padding:10px 0;
 }
 
 /* 2. 核心：默认情况下把下拉菜单藏起来 */
 .my-dropdown-menu {
-    display: none;             /* 默认隐藏 */
-    position: absolute;        /* 绝对定位，悬浮在导航栏下方 */
-    background-color: #28a8a8; /* 菜单背景色，建议设为和您导航栏一样的黄色 */
+    opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.2s ease,
+	visibility 0.2s ease 300ms;
+    position: absolute;  
+	top: 100%;      
+	left: 0;
+    background-color: #28a8a8; 
     min-width: 180px;          /* 菜单的最小宽度 */
     box-shadow: 0px 8px 16px rgba(0,0,0,0.2); /* 加上阴影，更有立体感 */
     z-index: 999;              /* 确保菜单浮在最上层，不被下面的内容遮挡 */
-    text-align: left;          /* 文字左对齐 */
+    text-align: left;
+	padding-top: 30px;
+	margin-top: -30px;
 }
 
 /* 3. 让菜单里的子链接变成垂直排列 */
@@ -2187,7 +2195,9 @@ ul.contact li a.icon-rss:before
 
 /* 5. 核心触发器：当鼠标放到 Products 上时，把菜单显示出来 */
 #menu ul li:hover .my-dropdown-menu {
-    display: block !important; /* 用 !important 强制让它显示出来 */
+	opacity: 1;
+	visibility:  visible;
+    transition-delay: 0ms;
 }
 /* 弹窗背景遮罩 */
 .modal {
