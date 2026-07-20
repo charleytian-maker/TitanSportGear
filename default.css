@@ -2159,7 +2159,6 @@ ul.contact li a.icon-rss:before
 .dropdown-item {
     position: relative;
     display: inline-block;
-	padding:10px 0;
 }
 
 /* 2. 核心：默认情况下把下拉菜单藏起来 */
