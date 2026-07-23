@@ -1887,7 +1887,7 @@ ul.contact li a.icon-rss:before
 	width:100%;
 	aspect-ratio: 1/1;
 	object-fit: contain;
-	display:block;
+	display: block;
 }
 /*********************************************************************************/
 /* Header                                                                        */
