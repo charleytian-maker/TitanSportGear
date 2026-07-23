@@ -1883,7 +1883,7 @@ ul.contact li a.icon-rss:before
 	gap: 1em;
 }
 
-[class&="-gallery"] img {
+[class$="-gallery"] img {
 	width:100%;
 	aspect-ratio: 1/1;
 	object-fit: contain;
