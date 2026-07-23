@@ -33,7 +33,8 @@
 .Tennisball-gallery img {
     width: 100%;                /* 宽度自动撑满网格 */
     height: 220px;              /* 固定高度，确保每张图大小完全一致 */
-    object-fit: cover;          /* 图片自动裁剪填充，不会变形拉伸 */
+    object-fit: contain;          /* 图片自动裁剪填充，不会变形拉伸 */
+    background-color: #fff;
     border-radius: 6px;         /* 微微的圆角，更美观 */
     box-shadow: 0 4px 10px rgba(0,0,0,0.5); /* 给图片加一点立体阴影 */
     transition: transform 0.3s; /* 鼠标放上去时加上平滑动画 */
