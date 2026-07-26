@@ -6,8 +6,8 @@
         </div>
         <div id="wechatModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:9999; align-items:center; justify-content:center;">
   <div style="background:#fff; padding:20px; border-radius:8px; text-align:center; position:relative;">
-    <span onclick="closeWechatModal()" style="position:absolute; top:10px; right:15px; cursor:pointer; font-size:20px;">&times;</span>
-    <p>Scan to add Wechat</p >
+    <span onclick="closeWeChatModal()" style="position:absolute; top:10px; right:15px; cursor:pointer; font-size:20px;">&times;</span>
+    <p>Scan to add WeChat</p >
     <img src="/images/weixin.jpg" alt="WeChat QR Code" style="width:200px; height:200px;">
   </div>
 </div>
@@ -18,7 +18,7 @@
                 </a >
             </li>
             <li>
-                <a href="+8613182822839" onclick="openWechatModal(); return false;" title="WeChat" aria-label="WeChat">
+                <a href="+8613182822839" onclick="openWeChatModal(); return false;" title="WeChat" aria-label="WeChat">
                     <i class="fa-brands fa-weixin"></i>
                 </a >
             </li>
@@ -51,9 +51,9 @@
 </div>
 
 <!-- 微信二维码弹窗 -->
-<div id="wechatModal" class="wechat-modal" onclick="closeWechatModal()">
+<div id="WeChatModal" class="WeChat-modal" onclick="closeWeChatModal()">
     <div class="wechat-modal-content" onclick="event.stopPropagation()">
-        <span class="wechat-modal-close" onclick="closeWechatModal()">&times;</span>
+        <span class="WeChat-modal-close" onclick="closeWeChatModal()">&times;</span>
         <!-- 占位图片路径，替换为你自己的微信二维码图片 -->
         < img src="images/wechat-qrcode.jpg" alt="WeChat QR Code" />
         <p>Scan to add us on WeChat</p >
@@ -91,7 +91,7 @@
   }
 
   /* 微信二维码弹窗样式 */
-  .wechat-modal {
+  .WeChat-modal {
     display: none;
     position: fixed;
     z-index: 999999;
@@ -103,10 +103,10 @@
     align-items: center;
     justify-content: center;
   }
-  .wechat-modal.active {
+  .WeChat-modal.active {
     display: flex;
   }
-  .wechat-modal-content {
+  .WeChat-modal-content {
     background-color: #fff;
     border-radius: 10px;
     padding: 24px;
@@ -114,18 +114,18 @@
     max-width: 90%;
     position: relative;
   }
-  .wechat-modal-content img {
+  .WeChat-modal-content img {
     width: 220px;
     height: 220px;
     object-fit: contain;
     border-radius: 6px;
   }
-  .wechat-modal-content p {
+  .WeChat-modal-content p {
     margin: 12px 0 0 0;
     color: #333;
     font-size: 14px;
   }
-  .wechat-modal-close {
+  .WeChat-modal-close {
     position: absolute;
     top: 8px;
     right: 14px;
@@ -134,7 +134,7 @@
     cursor: pointer;
     line-height: 1;
   }
-  .wechat-modal-close:hover {
+  .WeChat-modal-close:hover {
     color: #333;
   }
 #whatsappFloat {
@@ -160,11 +160,11 @@
 </style>
 
 <script>
-  function openWechatModal() {
-    document.getElementById('wechatModal').classList.add('active');
+  function openWeChatModal() {
+    document.getElementById('WeChatModal').classList.add('active');
   }
-  function closeWechatModal() {
-    document.getElementById('wechatModal').classList.remove('active');
+  function closeWeChatModal() {
+    document.getElementById('WeChatModal').classList.remove('active');
   }
 </script>
 <a href="https://wa.me/8613182822839?text=Hi%2C%20I%27m%20interested%20in%20your%20products"
