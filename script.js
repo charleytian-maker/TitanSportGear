@@ -52,10 +52,10 @@ document.addEventListener('click', function() {
   
 }); 
 }); 
-function openWechatModal() {
+function openWeChatModal() {
   document.getElementById('wechatModal').style.display = 'flex';
 }
 
-function closeWechatModal() {
+function closeWeChatModal() {
   document.getElementById('wechatModal').style.display = 'none';
 }
