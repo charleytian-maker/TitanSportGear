@@ -51,7 +51,7 @@ if (aboutBtn && contactPanel) {
     contactPanel.classList.remove('is-active');
   });
 }
-
+});
 function openWeChatModal() {
   document.getElementById('wechatModal').style.display = 'flex';
 }
