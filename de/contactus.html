@@ -1,17 +1,13 @@
-<style>
-  @view-transition {
-    navigation: none;
-  }
-</style>
-<html lang="de">
+<!DOCTYPE html>
+<html lang="de" xmlns="http://w3.org">
 <head>
-<link href='“https"//titansportgear-1.pages.dev/de/contactus.html"' rel="canonical"/>
-<meta charset="utf-8"/>
-<title>Kontaktieren Sie uns - TitanSportGear</title>
-<meta content="Kontakt TitanSportGear - professioneller Hersteller und Exporteur von Sportwaren." name="description"/>
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet"/>
-<link href="/default.css" media="all" rel="stylesheet" type="text/css"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<link rel="canonical" href="https://titansportgear.com/contactus.html">
+<meta charset="UTF-8">
+<title>Kontaktieren Sie Uns - Sportartikel Hersteller Deutschland</title>
+<meta name="description" content="Nehmen Sie Kontakt mit TitanSportGear auf, Hersteller & Exporteur von Sportgeräten. Anfragen zu Großhandel, OEM, Muster und Lieferung für deutsche Händler.">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 <style>
   /* 导航下拉菜单（与首页保持一致，header.html 注入后生效） */
   #menu ul li { position: relative !important; }
@@ -50,7 +46,6 @@
   .dropdown-item:hover .my-dropdown-menu { display: block !important; }
   #header-wrapper, #header, #menu, .dropdown-item { overflow: visible !important; }
   #header-wrapper { position: relative; z-index: 99999; }
-
   /* 联系方式页面内容样式 */
   body {
     margin: 0;
@@ -112,116 +107,122 @@
 <!-- 门楣由 load-header.js 动态注入到这里 -->
 <div id="header-placeholder"></div>
 <main class="contact-main">
-<!-- 谷歌地图（放在最上方） -->
-<div class="map-wrapper">
-<iframe frameborder="0" height="400" marginheight="0" marginwidth="0" scrolling="no" src="https://www.openstreetmap.org/export/embed.html?bbox=118.828%2C32.205%2C118.848%2C32.225&amp;layer=mapnik&amp;marker=32.2145,118.8368" width="100%"></iframe>
+  <!-- 地图模块完全保留未修改 -->
+  <div class="map-wrapper">
+<iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=118.828%2C32.205%2C118.848%2C32.225&layer=mapnik&marker=32.2145,118.8368"></iframe>
 </div>
-<!-- 三项联系方式自动下移 -->
-<div class="contact-grid">
-<!-- 电话区块 -->
-<div class="contact-box">
-<div class="icon"><i class="fa-solid fa-phone"></i></div>
-<div class="details">
-<h4>Telefon</h4>
-<p>+86 131-8282-2839</p>
-<p style="color: #a0aec0; font-size: 18px; margin-top: 5px;">Mo-Sa 8:00 - 18:00 Uhr</p>
-</div>
-</div>
-<!-- 邮箱区块 -->
-<div class="contact-box">
-<div class="icon"><i class="fa-solid fa-envelope"></i></div>
-<div class="details">
-<h4>E-Mail-Adresse</h4>
-<p>charleytian@gmail.com</p>
-<p style="color: #a0aec0; font-size: 18px; margin-top: 5px;">Antworten Sie in der Regel innerhalb von 24 Stunden</p>
-</div>
-</div>
-<!-- 地址区块 -->
-<div class="contact-box">
-<div class="icon"><i class="fa-solid fa-location-dot"></i></div>
-<div class="details">
-<h4>Adresse</h4>
-<p>Zimmer102 #1 Gebäude #66 Yangxin Rd, Liuhe Distrikt, Nanjing, Jiangsu Provinz, China</p>
-</div>
-</div>
-</div>
+  <!-- 三项联系方式 -->
+  <div class="contact-grid">
+    <!-- 电话区块 -->
+    <div class="contact-box">
+      <div class="icon"><i class="fa-solid fa-phone"></i></div>
+      <div class="details">
+        <h4>Telefon</h4>
+        <p>+86 131-8282-2839</p>
+        <p style="color: #a0aec0; font-size: 18px; margin-top: 5px;">Mo – Sa 08:00 – 18:00 Uhr</p>
+      </div>
+    </div>
+    <!-- 邮箱区块 -->
+    <div class="contact-box">
+      <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+      <div class="details">
+        <h4>E-Mail</h4>
+        <p>charleytian@gmail.com</p>
+        <p style="color: #a0aec0; font-size: 18px; margin-top: 5px;">Antwort in der Regel innerhalb von 24 Stunden</p>
+      </div>
+    </div>
+    <!-- 地址区块 -->
+    <div class="contact-box">
+      <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+      <div class="details">
+        <h4>Adresse</h4>
+        <p>Zimmer 102, Gebäude Nr.1, Yangxin-Straße 66, Liuhe-Bezirk, Nanjing, Provinz Jiangsu, China</p>
+      </div>
+    </div>
+  </div>
 </main>
 <!-- 页脚由 load-footer.js 动态注入到这里 -->
 <div id="footer-placeholder"></div>
 <script src="/load-header.js"></script>
 <script src="/load-footer.js"></script>
-</body>
-</html>
-<form action="https://api.web3forms.com/submit" enctype="multipart/form-data" id="contactForm" method="POST">
-<input name="access_key" type="hidden" value="f14fb69c-2d04-42d4-b6c3-d1ec82bd9d0e"/>
-<input name="subject" type="hidden" value="New Inquiry from TitanSportGear Website"/>
-<div class="form-group">
-<label for="name">Name</label>
-<input id="name" name="name" required="" type="text"/>
-</div>
-<div class="form-group">
-<label for="email">E-Mail-Adresse</label>
-<input id="email" name="email" required="" type="email"/>
-</div>
-<div class="form-group">
-<label for="country">Land</label>
-<input id="country" name="country" type="text"/>
-</div>
-<div class="form-group">
-<label for="message">Nachricht</label>
-<textarea id="message" name="message" required="" rows="5"></textarea>
-</div>
-<button type="submit">Anfrage senden</button>
+<script src="/script.js"></script>
+
+<!-- 咨询表单 -->
+<form id="contactForm" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+  <input type="hidden" name="access_key" value="f14fb69c-2d04-42d4-b6c3-d1ec82bd9d0e">
+  <input type="hidden" name="subject" value="Neue Anfrage von der TitanSportGear Webseite">
+  <div class="form-group">
+    <label for="name">Ihr Name</label>
+    <input type="text" id="name" name="name" required>
+  </div>
+  <div class="form-group">
+    <label for="email">E-Mail-Adresse</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+  <div class="form-group">
+    <label for="country">Land</label>
+    <input type="text" id="country" name="country">
+  </div>
+  <div class="form-group">
+    <label for="message">Ihre Nachricht</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+  </div>
+  <button type="submit">Anfrage absenden</button>
 </form>
+
+<!-- FAQ 常见问题 -->
 <section class="faq-block">
-<h3>Häufig gestellte Fragen</h3>
-<div class="faq-item">
-<h4>Was ist Ihre Mindestbestellmenge?</h4>
-<p>MOQ hängt von verschiedenen Artikeln ab. Kleine Testbestellungen sind für die meisten Sportwaren akzeptabel. Kontaktieren Sie uns, um detaillierte Anforderung zu erhalten.</p>
-</div>
-<div class="faq-item">
-<h4>Kann ich benutzerdefiniertes Logo und benutzerdefinierte Verpackung hinzufügen?</h4>
-<p> - Ja. - Ja. Wir unterstützen Seidendruck, Wärmeübertragungslogo und kundenspezifische Farbkastenverpackung als Ihre Anfrage.</p>
-</div>
-<div class="faq-item">
-<h4>Wie lange dauert die Produktionsführungszeit?</h4>
-<p>Normalerweise 15-25 Werktage nach der Anzahlung bestätigt, basierend auf Ihrer Bestellmenge.</p>
-</div>
-<div class="faq-item">
-<h4>Kann ich Proben vor der Massenproduktion bestellen?</h4>
-<p>Produktproben sind verfügbar. Probenkosten und Fracht können diskutiert werden.</p>
-</div>
-<div class="faq-item">
-<h4>Welche Zahlungsbedingungen akzeptieren Sie?</h4>
-<p>Wir unterstützen T / T Banküberweisung, Western Union. Verhandlungsfähig für langfristige Partner.</p>
-</div>
-<div class="faq-item">
-<h4>Welche Versandmethoden sind verfügbar?</h4>
-<p>Seefracht, Luftfracht und Express-Kurier wie DHL, FedEx für kleine Bestellungen.</p>
-</div>
-</section>
+ <h3>Häufig gestellte Fragen</h3>
+ <div class="faq-item">
+ <h4>Wie hoch ist Ihre Mindestbestellmenge?</h4>
+ <p>Die MOQ variiert je nach Produkt. Bei den meisten Sportartikeln sind kleine Testbestellungen möglich. Kontaktieren Sie uns für genaue Anforderungen.</p>
+ </div>
+ <div class="faq-item">
+ <h4>Kann ich ein individuelles Logo und eine eigene Verpackung anfertigen lassen?</h4>
+ <p>Ja, wir unterstützen Siebdruck, Transferdruck für Logos sowie individuelle Farbkartonverpackungen nach Ihren Wünschen.</p>
+ </div>
+ <div class="faq-item">
+ <h4>Wie lange dauert die Produktionszeit?</h4>
+ <p>Nach Eingang der Anzahlung beträgt die Lieferzeit üblicherweise 15–25 Werktage, abhängig von Ihrer Bestellmenge.</p>
+ </div>
+ <div class="faq-item">
+ <h4>Kann ich vor der Großproduktion Muster bestellen?</h4>
+ <p>Produktmuster sind verfügbar. Kosten für Muster und Versand lassen sich gemeinsam besprechen.</p>
+ </div>
+ <div class="faq-item">
+ <h4>Welche Zahlungsbedingungen akzeptieren Sie?</h4>
+ <p>Wir unterstützen T/T Banküberweisung und Western Union. Für langjährige Partner sind individuelle Abmachungen möglich.</p>
+ </div>
+ <div class="faq-item">
+ <h4>Welche Versandwege gibt es?</h4>
+ <p>Seefracht, Luftfracht sowie Expresskurriere wie DHL und FedEx für kleine Aufträge.</p>
+ </div>
+ </section>
+
+<!-- 表单提交JS（逻辑完全不变，仅弹窗文字德语化） -->
 <script>
 document.getElementById('contactForm').addEventListener('submit', async function(e) {
   e.preventDefault();
   const form = e.target;
   const data = new FormData(form);
   const btn = form.querySelector('button');
-  btn.textContent = 'Sending...';
+  btn.textContent = 'Wird gesendet...';
   btn.disabled = true;
-
   try {
     const res = await fetch(form.action, { method: 'POST', body: data });
     const result = await res.json();
     if (result.success) {
-      alert('Message sent! We will get back to you soon.');
+      alert('Ihre Nachricht wurde versandt! Wir melden uns bald bei Ihnen.');
       form.reset();
     } else {
-      alert('Something went wrong, please try again.');
+      alert('Es ist ein Fehler aufgetreten, bitte versuchen Sie es erneut.');
     }
-  } catch (err) {
-    alert('Network error, please try again.');
+  } catch (err)
+    alert('Netzwerkfehler, bitte versuchen Sie es später noch einmal.');
   }
-  btn.textContent = 'Send Inquiry';
+  btn.textContent = 'Anfrage absenden';
   btn.disabled = false;
 });
 </script>
+</body>
+</html>
