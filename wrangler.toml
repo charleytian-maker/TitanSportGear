@@ -1,5 +1,5 @@
 #:schema https://json.schemastore.org/wrangler.toml
-name = "titan"
+name = "tian"
 compatibility_date = "2026-06-25"
 
 [assets]
