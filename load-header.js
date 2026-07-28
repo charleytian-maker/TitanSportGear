@@ -9,7 +9,7 @@
 // ===========================================================
 
 var isGermanPage = window.location.pathname.indexOf('/de/') > -1;
-var headerFile = isGermanPage ? '/de/header_de.html' : '/header.html';
+var headerFile = isGermanPage ? '/de/header_de.txt' : '/header.txt';
 
 fetch(headerFile)
   .then(function(response) {
