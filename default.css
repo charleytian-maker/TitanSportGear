@@ -1833,7 +1833,7 @@ ul.contact li a.icon-rss:before
 {
 	display: inline-block;
 	width: 100%;
-	aspect-ratio: 1/1;
+	aspect-ratio: 21/9;
 	overflow: hidden;
 }
 
@@ -1857,7 +1857,7 @@ ul.contact li a.icon-rss:before
 {
 	display: block;
 	width: 100%;
-	margin: 0 0 2em 0;
+	margin: 0 0 1em 0;
 }
 
 .image-left
