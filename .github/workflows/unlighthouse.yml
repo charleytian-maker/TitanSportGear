@@ -36,8 +36,10 @@ jobs:
         run: |
           echo "===== 当前目录内容 ====="
           ls -la
-          echo "===== 查找所有 .unlighthouse 相关目录 ====="
-          find . -iname "*unlighthouse*" -maxdepth 3 2>/dev/null || true
+          echo "===== .unlighthouse 目录内部结构（递归） ====="
+          find .unlighthouse -type f 2>&1 || echo ".unlighthouse 目录不存在或读取失败"
+          echo "===== .unlighthouse 目录树 ====="
+          find .unlighthouse 2>&1 || true
 
       # 把生成的报告作为 Artifact 上传，方便在 Actions 页面下载查看
       # if-no-files-found: warn 让这一步即使没找到文件也不会让整个 workflow 失败
