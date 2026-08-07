@@ -1785,7 +1785,7 @@ ul.contact li a.icon-rss:before
 {
 	overflow:  hidden;
 	padding: 5em 0em;
-	background: url(images/bg01.jpg) repeat;
+	background: url(https://img.titansportgear.com/bg01.jpg) repeat;
 	box-shadow: inset 0px 1px 0px 0px rgba(0,0,0,0.05), inset 0px 4px 15px 0px rgba(0,0,0,0.1);
 }
 
@@ -1885,7 +1885,7 @@ ul.contact li a.icon-rss:before
 #header-wrapper
 {
 	overflow: visible;
-	background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('images/mm-001.png');
+	background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('https://img.titansportgear.com/mm-001.webp');
 	background-size:cover;
 	background-position:center;
 	background-repeat:no-repeat;
