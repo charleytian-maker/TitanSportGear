@@ -1788,6 +1788,13 @@ ul.contact li a.icon-rss:before
 
 #featured .style1 a
 {
+	color: #cccccc;
+	font-weight: 600;
+}
+
+#featured .style1 a:hover
+{
+	color: #fff176;
 }
 
 .wrapper-style1
