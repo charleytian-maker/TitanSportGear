@@ -1790,6 +1790,7 @@ ul.contact li a.icon-rss:before
 {
 	color: #cccccc;
 	font-weight: 600;
+	text-decoration:none;
 }
 
 #featured .style1 a:hover
