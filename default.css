@@ -1,4 +1,4 @@
-@charset 'UTF-8';
+@charset "UTF-8";
 @view-transition {
   navigation: none;
 }
@@ -26,10 +26,9 @@
 /*********************************************************************************/
 
 	/*
-		Powered by:
-		
-		Font Awesome (http://fortawesome.github.com/Font-Awesome/)
-		Font Awesome More (http://gregoryloucas.github.com/Font-Awesome-More/)
+	Powered by:
+	Font Awesome (http://fortawesome.github.com/Font-Awesome/)
+	Font Awesome More (http://gregoryloucas.github.com/Font-Awesome-More/)
 	*/
 
 	.icon
@@ -44,20 +43,10 @@
 	font-family: FontAwesome;
 	font-weight: normal;
 	font-style: normal;
-	-webkit-text-rendering: optimizeLegibility;
-	-moz-text-rendering: optimizeLegibility;
-	-ms-text-rendering: optimizeLegibility;
-	-o-text-rendering: optimizeLegibility;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
-	-moz-font-smoothing: antialiased;
-	-ms-font-smoothing: antialiased;
-	-o-font-smoothing: antialiased;
-	font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-feature-settings: "liga" 1, "dlig" 1;
-	-moz-font-feature-settings: "liga=1, dlig=1";
-	-ms-font-feature-settings: "liga" 1, "dlig" 1;
-	-o-font-feature-settings: "liga" 1, "dlig" 1;
 	font-feature-settings: "liga" 1, "dlig" 1;
 }
 
@@ -212,7 +201,7 @@
 }
 
 /* \f020 doesn't work in Safari. all shifted one down */
-		.icon-refresh:before
+	.icon-refresh:before
 {
 	content: "\f021";
 }
@@ -1512,15 +1501,6 @@
 	content: "\f328";
 }
 
-.icon-cloud-upload:before
-{
-	content: "\f0ee";
-}
-
-.icon-cloud-download:before
-{
-	content: "\f0ed";
-}
 
 html, body
 {
@@ -1884,12 +1864,14 @@ ul.contact li a.icon-rss:before
 
 #header-wrapper
 {
+	position: relative;
+	z-index: 9999;
 	overflow: visible;
-	background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('https://img.titansportgear.com/mm-001.webp');
-	background-size:cover;
-	background-position:center;
-	background-repeat:no-repeat;
-	height:220px;
+	background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('https://img.titansportgear.com/mm-001.webp');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 220px;
 }
 
 #header
@@ -2092,6 +2074,9 @@ ul.contact li a.icon-rss:before
 
 #welcome
 {
+	position: relative;
+	z-index: 1;
+	margin-top: 100px;
 }
 
 #welcome .title h2
@@ -2156,226 +2141,245 @@ ul.contact li a.icon-rss:before
 {
 	float: right;
 }
-#logo img {
-    height: 120px;
-    width: auto;
-    display: block;
-}
-/* 1. 让包含 Products 的列表项具备定位能力 */
-.dropdown-item {
-    position: relative;
-    display: inline-block;
+
+/*********************************************************************************/
+/* Logo                                                                          */
+/*********************************************************************************/
+
+#logo img
+{
+	height: 120px;
+	width: auto;
+	display: block;
 }
 
-/* 2. 核心：默认情况下把下拉菜单藏起来 */
-.my-dropdown-menu {
-    opacity: 0;
-	visibility: hidden;
-	transition: opacity 0.2s ease,
-	visibility 0.2s ease 300ms;
-    position: absolute;  
-	top: 100%;      
+/*********************************************************************************/
+/* Stacking context                                                             */
+/* (base #header-wrapper and #welcome rules live in the Header/Welcome sections */
+/* above; this just keeps overflow visible so the dropdown below isn't clipped) */
+/*********************************************************************************/
+
+#header-wrapper,
+#header,
+#menu,
+.dropdown-item
+{
+	overflow: visible;
+}
+
+/*********************************************************************************/
+/* "Products" dropdown menu                                                     */
+/* Nested under #menu, so selectors are #menu-qualified to naturally win over    */
+/* the #menu li a base styles (no !important needed).                           */
+/*********************************************************************************/
+
+#menu ul li
+{
+	position: relative;
+}
+
+.dropdown-item
+{
+	position: relative;
+	display: inline-block;
+}
+
+#menu .my-dropdown-menu
+{
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #00B0B3;
+	min-width: 160px;
+	max-height: 350px;
+	overflow-y: auto;
+	padding: 5px 0;
+	border-radius: 4px;
+	box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+	z-index: 9999;
+}
+
+.dropdown-item:hover .my-dropdown-menu
+{
+	display: block;
+}
+
+#menu .my-dropdown-menu a
+{
+	display: block;
+	text-align: center;
+	padding: 10px 15px;
+	font-size: 12px;
+	font-weight: normal;
+	text-transform: none;
+	text-decoration: none;
+	color: #ffffff;
+	background: none;
+	border-bottom: 1px solid #33c0c3;
+}
+
+#menu .my-dropdown-menu a:last-child
+{
+	border-bottom: none;
+}
+
+#menu .my-dropdown-menu a:hover
+{
+	background-color: #008F92;
+	color: #ffffff;
+}
+
+/*********************************************************************************/
+/* Language switcher                                                            */
+/* #menu-qualified so the smaller font size and active color actually win       */
+/* against #menu li a (previously lost that fight silently - see notes)         */
+/*********************************************************************************/
+
+#menu .lang-switch
+{
+	float: right;
+	padding: 0.80em 0 1.5em;
+	white-space: nowrap;
+}
+
+#menu .lang-switch a
+{
+	display: inline;
+	color: #fff176;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 0.8em;
+}
+
+#menu .lang-switch a.lang-active
+{
+	color: #DE6D53;
+}
+
+/*********************************************************************************/
+/* Header contact dropdown panel                                                */
+/*********************************************************************************/
+
+.site-header
+{
+	position: relative;
+	z-index: 1000;
+	background-color: #1a1f2c;
+	height: 70px;
+}
+
+.contact-dropdown
+{
+	position: absolute;
+	top: 100%;
 	left: 0;
-    background-color: #28a8a8; 
-    min-width: 180px;          /* 菜单的最小宽度 */
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2); /* 加上阴影，更有立体感 */
-    z-index: 999;              /* 确保菜单浮在最上层，不被下面的内容遮挡 */
-    text-align: left;
-	padding-top: 10px;
-	margin-top: -10px;
+	width: 100%;
+	background-color: #ffffff;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(-10px);
+	transition: all 0.3s ease;
+	overflow: hidden;
 }
 
-/* 3. 让菜单里的子链接变成垂直排列 */
-.my-dropdown-menu a {
-    color: #ffffff;            /* 文字颜色 */
-    padding: 10px 15px;        /* 内边距 */
-    text-decoration: none;     /* 去掉下划线 */
-    display: block;            /* 关键：变成块级元素，单独占一行 */
-}
-
-/* 4. 鼠标悬停在子菜单上时的变色效果（可选） */
-.my-dropdown-menu a:hover {
-    background-color: #1f8c8c; /* 鼠标放上去时颜色变深一点 */
-}
-
-/* 5. 核心触发器：当鼠标放到 Products 上时，把菜单显示出来 */
-#menu ul li:hover .my-dropdown-menu {
+.contact-dropdown.is-active
+{
 	opacity: 1;
-	visibility:  visible;
-    transition-delay: 0ms;
-}
-/* 弹窗背景遮罩 */
-.modal {
-  display: none; /* 默认隐藏 */
-  position: fixed;
-  z-index: 1000; /* 确保在最上层 */
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* 半透明黑背景 */
-  justify-content: center;
-  align-items: center;
+	visibility: visible;
+	transform: translateY(0);
 }
 
-/* 弹窗主体内容盒 */
-.modal-content {
-  background-color: #fff;
-  padding: 20px;
-  max-width: 500px;
-  width: 90%;
-  border-radius: 8px;
-  text-align: center;
-  position: relative;
+.contact-iframe
+{
+	display: block;
+	width: 100%;
+	height: 250px;
 }
 
-/* 大图样式 */
-.modal-content img {
-  max-width: 100%;
-  max-height: 70vh;
-  object-fit: contain;
+.contact-people-img
+{
+	display: block;
+	width: 120px;
+	height: auto;
+	margin: 0 auto 12px;
+	border-radius: 8px;
 }
 
-/* 产品说明文本样式 */
-.modal-desc {
-  margin-top: 15px; /* 图片与文字之间的空行 */
-  font-size: 16px;
-  color: #333;
-  line-height: 1.5;
-  font-weight: bold;
+/*********************************************************************************/
+/* Image lightbox / modal                                                       */
+/*********************************************************************************/
+
+.modal
+{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 1000;
 }
 
-/* 关闭按钮 */
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 28px;
-  cursor: pointer;
-  color: #aaa;
+.modal-content
+{
+	position: relative;
+	max-width: 500px;
+	width: 90%;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 8px;
+	text-align: center;
 }
-.close-btn:hover {
-  color: #000;
+
+.modal-content img
+{
+	max-width: 100%;
+	max-height: 70vh;
+	object-fit: contain;
 }
-#menu .lang-switch {
-  float: right;
-  padding: 0.80em 0 1.5em !important;
+
+.modal-desc
+{
+	margin-top: 15px;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 1.5;
+	color: #333;
 }
-#menu .lang-switch a {
-  color: #fff176;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.8em;
+
+.close-btn
+{
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	font-size: 28px;
+	color: #aaa;
+	cursor: pointer;
 }
-#menu .lang-switch a.lang-active {
-  color: #DE6D53;
+
+.close-btn:hover
+{
+	color: #000;
 }
-  /* 让导航栏的列表项具备定位能力 */
-  #menu ul li {
-    position: relative !important;
-  }
-  /* 默认把下拉框藏起来 */
-  .my-dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;                  /* 刚好在 Products 正下方 */
-    left: 50%;
-    transform: translateX(-50%);/* 居中对齐 */
-    background-color: #00B0B3;  /* 弹窗背景为白色 */
-    min-width: 160px;           /* 菜单宽度 */
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2); /* 加个高级的阴影 */
-    padding: 5px 0;
-    z-index: 9999;              /* 保证显示在最上层 */
-    border-radius: 4px;         /* 微微的圆角 */
-	max-height: 350px;   /* 限制下拉菜单的最大高度，10个选项不会冲出屏幕 */
-overflow-y: auto;    /* 选项过多时，菜单内部会自动出现上下滚动条 */
-  }
-  /* 下拉菜单里面每一行字的样式 */
-  .my-dropdown-menu a {
-    display: block !important;
-    color: #ffffff !important;  /* 弹窗里的文字用深灰色，保证白底黑字清晰 */
-    padding: 10px 15px !important;
-    font-size: 12px !important; /* 字号稍微缩小一点 */
-    text-transform: none !important; /* 允许大小写 */
-    font-weight: normal !important;  /* 不加粗 */
-    text-align: center !important;   /* 文字居中 */
-    text-decoration: none !important;
-    border-bottom: 1px solid #33c0c3;   /* 每行之间的小分隔线 */
-    background: none !important;     /* 清除可能继承的背景 */
-  }
-  .my-dropdown-menu a:last-child { border-bottom: none; }
-/* 鼠标放到下拉选项上时，背景变灰、字变黑 */
-  .my-dropdown-menu a:hover { 
-    background-color: #008F92 !important; 
-    color: #ffffff !important; 
-  }
- /* 💡 核心：当鼠标悬停在 Products 上时，展现下拉菜单 */
-  .dropdown-item:hover .my-dropdown-menu {
-    display: block !important;/*控制整体下移，数字越大越靠下*/
-  }
-	#header-wrapper {
-  position:relative;
-  z-index:9999;
+
+/*********************************************************************************/
+/* Layout utility                                                               */
+/* NOTE: this matches ANY element whose class ends in "-container", anywhere on */
+/* the site - broad and easy to hit by accident. Consider a specific class name */
+/* instead if only one section needed this offset.                              */
+/*********************************************************************************/
+
+[class$="-container"]
+{
+	margin-top: 80px;
 }
-	#welcome {
-    position: relative;    /* 赋予它层级控制能力 */
-    z-index: 1 !important; /* 把它压到最底层，这样绝不会挡住上面的菜单 */
-	margin-top: 100px;
-}
-	/* 强行解除所有父级盒子的溢出隐藏限制 */
-#header-wrapper, 
-#header, 
-#menu, 
-.dropdown-item {
-    overflow: visible !important;
-}
-.lang-switch {
-  white-space: nowrap !important;
-}
-.lang-switch a {
-  display: inline !important;
-}
-/* 门楣相对定位，作为基准 */
-.site-header {
-  position: relative;
-  z-index: 1000;
-  background-color: #1a1f2c;
-  height: 70px; /* 假设您的门楣高度是 70px */
-}
-/* 下拉容器定位：锁定在门楣正下方 */
-.contact-dropdown {
-  position: absolute;
-  top: 100%;             /* 100% 意味着紧贴门楣下边缘 */
-  left: 0;
-  width: 100%;           /* 宽度占满全屏 */
-  background-color: #ffffff;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-   /* 初始隐藏与动画 */
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-  transition: all 0.3s ease;
-  overflow: hidden;
-}
-/* 激活状态 */
-.contact-dropdown.is-active {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-/* 控制 iframe 的样式 */
-.contact-iframe {
-  width: 100%;
-  height: 250px; /* 根据您的 contact-us.html 内容高度来设定一个固定高度 */
-  display: block;
-}
-.contact-people-img {
-  width: 120px;
-  height: auto;
-  display: block;
-  margin: 0 auto 12px;
-  border-radius: 8px;
-}
+
 /*********************************************************************************/
 /* About Section (Company Introduction)                                         */
 /*********************************************************************************/
@@ -2394,9 +2398,9 @@ overflow-y: auto;    /* 选项过多时，菜单内部会自动出现上下滚�
 
 .about-section h2
 {
+	margin-bottom: 0.3em;
 	font-size: 1.8em;
 	color: #eeeeee;
-	margin-bottom: 0.3em;
 }
 
 .about-section h3
@@ -2409,33 +2413,33 @@ overflow-y: auto;    /* 选项过多时，菜单内部会自动出现上下滚�
 
 .section-subtitle
 {
+	margin-bottom: 1.5em;
 	font-size: 0.95em;
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
 	color: #888;
-	margin-bottom: 1.5em;
 }
 
 .placeholder-text
 {
+	margin-bottom: 1.2em;
 	font-size: 1em;
 	line-height: 1.8;
 	color: #555;
-	margin-bottom: 1.2em;
 }
 
 .about-list
 {
-	list-style: none;
 	margin: 0 0 1.2em 0;
 	padding: 0;
+	list-style: none;
 }
 
 .about-list li
 {
 	position: relative;
-	padding-left: 1.6em;
 	margin-bottom: 0.9em;
+	padding-left: 1.6em;
 	line-height: 1.7;
 	color: #e2e8f0;
 }
@@ -2443,12 +2447,12 @@ overflow-y: auto;    /* 选项过多时，菜单内部会自动出现上下滚�
 .about-list li:before
 {
 	content: "\f00c";
-	font-family: FontAwesome;
 	position: absolute;
 	left: 0;
 	top: 0.05em;
-	color: #fff176;
+	font-family: FontAwesome;
 	font-size: 0.9em;
+	color: #fff176;
 }
 
 .about-list li strong
@@ -2458,96 +2462,128 @@ overflow-y: auto;    /* 选项过多时，菜单内部会自动出现上下滚�
 
 .about-list li em
 {
-	color: #b8860b;
 	font-style: normal;
 	font-size: 0.85em;
-}
-.about-main {
-    background-color: #ffffff;
-    color: #dddddd;
+	color: #b8860b;
 }
 
-.about-main-inner {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 3em 1.5em;
+.about-main
+{
+	background-color: #ffffff;
+	color: #dddddd;
 }
-.contact-box .icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: #DE6D53;
-  color: #1C1C1C;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  margin: 0 auto 12px;
+
+.about-main-inner
+{
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 3em 1.5em;
 }
-#contactForm .form-group {
-  margin-bottom: 16px;
-}
-#contactForm label {
-  display: block;
-  margin-bottom: 6px;
-  color: #fff176;
-  font-size: 14px;
-}
-#contactForm input,
-#contactForm textarea {
-  width: 100%;
-  padding: 10px 12px;
-  background: #2A2A2A;
-  border: 1px solid #444;
-  border-radius: 4px;
-  color: #fff;
-  font-size: 14px;
-}
-#contactForm input:focus,
-#contactForm textarea:focus {
-  outline: none;
-  border-color: #DE6D53;
-}
-#contactForm button {
-  background: #DE6D53;
-  color: #fff;
-  border: none;
-  padding: 12px 28px;
-  border-radius: 4px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: opacity 0.2s;
-}
-#contactForm button:hover {
-  opacity: 0.85;
-}
- [class$="-container"]{
-  margin-top: 80px;
-}
+
 .about-main ul li,
-.about-main ul li p {
-	color:#f5f5f5;
+.about-main ul li p
+{
+	color: #f5f5f5;
 }
-.image-full video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+
+/*********************************************************************************/
+/* Contact box + form                                                           */
+/*********************************************************************************/
+
+.contact-box .icon
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 60px;
+	height: 60px;
+	margin: 0 auto 12px;
+	border-radius: 50%;
+	background: #DE6D53;
+	color: #1C1C1C;
+	font-size: 24px;
 }
-.gallery-grid {
-   display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   gap: 24px;
-   margin: 20px 0;
- }
- .gallery-placeholder {
-   width: 100%;
-   height: 260px; /* 统一固定高度，四张盒子大小一模一样 */
-   overflow: hidden;
-   border-radius: 6px;
- }
- .gallery-placeholder img {
-   width: 100%;
-   height: 100%;
-   object-fit: cover; /* 自动裁切拉伸，填满容器不变形 */
-   display: block;
- }
+
+#contactForm .form-group
+{
+	margin-bottom: 16px;
+}
+
+#contactForm label
+{
+	display: block;
+	margin-bottom: 6px;
+	font-size: 14px;
+	color: #fff176;
+}
+
+#contactForm input,
+#contactForm textarea
+{
+	width: 100%;
+	padding: 10px 12px;
+	background: #2A2A2A;
+	border: 1px solid #444;
+	border-radius: 4px;
+	color: #fff;
+	font-size: 14px;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus
+{
+	outline: none;
+	border-color: #DE6D53;
+}
+
+#contactForm button
+{
+	padding: 12px 28px;
+	background: #DE6D53;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: opacity 0.2s;
+}
+
+#contactForm button:hover
+{
+	opacity: 0.85;
+}
+
+/*********************************************************************************/
+/* Media gallery                                                                */
+/*********************************************************************************/
+
+.image-full video
+{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.gallery-grid
+{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 24px;
+	margin: 20px 0;
+}
+
+.gallery-placeholder
+{
+	width: 100%;
+	height: 260px;
+	overflow: hidden;
+	border-radius: 6px;
+}
+
+.gallery-placeholder img
+{
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
