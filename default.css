@@ -1551,10 +1551,6 @@ p
 	line-height: 180%;
 }
 
-strong
-{
-}
-
 a
 {
 	color: #2f2f2f;
@@ -1568,10 +1564,6 @@ a:hover
 a img
 {
 	border: none;
-}
-
-img.border
-{
 }
 
 img.alignleft
@@ -1599,10 +1591,6 @@ hr
 	border-bottom: solid 4px #2F2F2F;
 	margin: 0 0 3em 0;
 	text-align: center;
-}
-
-.title:after
-{
 }
 
 .title h2
@@ -1969,10 +1957,6 @@ ul.contact li a.icon-rss:before
 	text-transform: uppercase;
 	outline: 0;
 	color: #fff176;
-}
-
-#menu li:hover a, #menu li.active a, #menu li.active span
-{
 }
 
 #menu .current_page_item a
