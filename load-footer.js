@@ -1,11 +1,9 @@
-// ===========================================================
-// 统一加载页脚 footer.html
-// 用法：在页面 </body> 前加入：
-//   <div id="footer-placeholder"></div>
-//   <script src="/load-footer.js"></script>
-// ===========================================================
+// 根据当前路径判断语言，加载对应页脚
+var footerPath = window.location.pathname.includes('/de/') 
+  ? '/de/footer.html' 
+  : '/footer.html';
 
-fetch('/footer.html')
+fetch(footerPath)
   .then(function(response) {
     return response.text();
   })

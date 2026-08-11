@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<div id="footer" class="container">
+    <div>
+        <div class="title">
+            <h2>KONTAKTIEREN SIE UNS</h2>
+            <span class="byline">Wir freuen uns auf internationale Käufer und Partner. Senden Sie uns noch heute Ihre Anfrage - wir antworten innerhalb von 24 Stunden!</span>
+        </div>
+        <div id="wechatModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:9999; align-items:center; justify-content:center;">
+  <div style="background:#fff; padding:20px; border-radius:8px; text-align:center; position:relative;">
+    <span onclick="closeWeChatModal()" style="position:absolute; top:10px; right:15px; cursor:pointer; font-size:20px;">&times;</span>
+    <p>Scan to add WeChat</p >
+    <img src="https://img.titansportgear.com/weixin.jpg" alt="WeChat QR Code" style="width:200px; height:200px;">
+  </div>
+</div>
+        <ul class="contact contact-icons">
+            <li>
+                <a href="https://wa.me/+8613182822839?text=Hi%2C%20I%27m%20interested%20in%20your%20products" target="_blank" rel="noopener noreferrer" title="WhatsApp" aria-label="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a >
+            </li>
+            <li>
+                <a href="images/weixin.jpg" onclick="openWeChatModal(); return false;" title="WeChat" aria-label="WeChat">
+                    <i class="fa-brands fa-weixin"></i>
+                </a >
+            </li>
+            <li>
+                <a href="mailto:info@titansportgear.com" title="Email" aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a >
+            </li>
+            <li>
+                <a href="https://www.facebook.com/share/1EZpu56apk/" target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Facebook">
+                    <!-- 占位链接，替换为你的 Facebook 主页地址 -->
+                    <i class="fa-brands fa-facebook"></i>
+                </a >
+            </li>
+            <li>
+                <a href="https://www.instagram.com/charley.tian" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Instagram">
+                    <!-- 占位链接，替换为你的 Instagram 主页地址 -->
+                    <i class="fa-brands fa-instagram"></i>
+                </a >
+            </li>
+            <li>
+                <a href="https://m.me/61587976749509" target="_blank" rel="noopener noreferrer" title="Messenger" aria-label="Messenger">
+                    <!-- 占位链接，替换为你的 Messenger 地址，如 https://m.me/你的用户名 -->
+                    <i class="fa-brands fa-facebook-messenger"></i>
+                </a >
+            </li>
+        </ul>
+    </div>
+    <p style="font-size: 13px; color: rgba(255,255,255,0.6);">&copy; 2026 TITANSPORTGEAR. ALLE RECHTE VORBEHALTEN..</p >
+</div>
+
+<!-- 微信二维码弹窗 -->
+<div id="WeChatModal" class="WeChat-modal" onclick="closeWeChatModal()">
+    <div class="wechat-modal-content" onclick="event.stopPropagation()">
+        <span class="WeChat-modal-close" onclick="closeWeChatModal()">&times;</span>
+        <!-- 占位图片路径，替换为你自己的微信二维码图片 -->
+        <img src="https://img.titansportgear.com/wechat-qrcode.jpg" alt="WeChat QR Code" />
+        <p>Scan to add us on WeChat</p >
+    </div>
+</div>
+
+<style>
+  /* 联系方式图标 */
+  .contact-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  .contact-icons li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.08);
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  .contact-icons li a:hover {
+    background-color: #fff176;
+    color: #1a1f2c;
+    transform: translateY(-2px);
+  }
+
+  /* 微信二维码弹窗样式 */
+  .WeChat-modal {
+    display: none;
+    position: fixed;
+    z-index: 999999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.85);
+    align-items: center;
+    justify-content: center;
+  }
+  .WeChat-modal.active {
+    display: flex;
+  }
+  .WeChat-modal-content {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 24px;
+    text-align: center;
+    max-width: 90%;
+    position: relative;
+  }
+  .WeChat-modal-content img {
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+    border-radius: 6px;
+  }
+  .WeChat-modal-content p {
+    margin: 12px 0 0 0;
+    color: #333;
+    font-size: 14px;
+  }
+  .WeChat-modal-close {
+    position: absolute;
+    top: 8px;
+    right: 14px;
+    font-size: 24px;
+    color: #999;
+    cursor: pointer;
+    line-height: 1;
+  }
+  .WeChat-modal-close:hover {
+    color: #333;
+  }
+#whatsappFloat {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 999;
+  transition: transform 0.2s;
+}
+#whatsappFloat:hover {
+  transform: scale(1.08);
+}
+</style>
+
+<script>
+  function openWeChatModal() {
+    document.getElementById('WeChatModal').classList.add('active');
+  }
+  function closeWeChatModal() {
+    document.getElementById('WeChatModal').classList.remove('active');
+  }
+</script>
+<a href="https://wa.me/8613182822839?text=Hi%2C%20I%27m%20interested%20in%20your%20products"
+   target="_blank"
+   id="whatsappFloat"
+   aria-label="Chat on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a >
