@@ -2160,7 +2160,7 @@ ul.contact li a.icon-rss:before
 
 #header-wrapper {
   position: relative;
-  z-index: 99999;
+  z-index: 9999;
 }
 
 #menu ul li,
@@ -2190,7 +2190,7 @@ ul.contact li a.icon-rss:before
 
 .my-dropdown-menu a {
   display: block;
-  color: #ffffff;
+  color: #cccccc;
   padding: 10px 15px;
   font-size: 12px;
   font-weight: normal;
