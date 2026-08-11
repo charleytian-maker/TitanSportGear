@@ -2181,7 +2181,7 @@ ul.contact li a.icon-rss:before
   padding: 5px 0;
   border-radius: 4px;
   box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-  z-index: 99999;
+  z-index: 9999;
 }
 
 .dropdown-item:hover .my-dropdown-menu {
