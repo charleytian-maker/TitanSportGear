@@ -2183,6 +2183,9 @@ ul.contact li a.icon-rss:before
   box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
   z-index: 9999;
 }
+html[lang="de"] .my-dropdown-menu {
+  min-width: 220px;
+}
 
 .dropdown-item:hover .my-dropdown-menu {
   display: block;
