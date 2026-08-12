@@ -2182,7 +2182,7 @@ ul.contact li a.icon-rss:before
   left: 50%;
   transform: translateX(-50%);
   background-color: #28a8a8;
-  min-width: 160px;
+  min-width: 180px;
   max-height: 350px;
   overflow-y: auto;
   padding: 5px 0;
