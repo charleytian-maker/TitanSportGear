@@ -2198,10 +2198,10 @@ html[lang="de"] .my-dropdown-menu {
 .my-dropdown-menu a {
   display: block;
   color: #cccccc;
-  padding: 8px 6px;
+  padding: 10px 10px;
   word-break: break-word;
   overflow: break-word;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: normal;
   text-transform: none;
   text-align: center;
