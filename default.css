@@ -2175,7 +2175,9 @@ ul.contact li a.icon-rss:before
   left: 50%;
   transform: translateX(-50%);
   background-color: #28a8a8;
-  min-width: 100px;
+  width: 160px;
+  min-width: 160px;
+  max-width: 160px;
   max-height: 350px;
   overflow-y: auto;
   padding: 5px 0;
@@ -2184,7 +2186,9 @@ ul.contact li a.icon-rss:before
   z-index: 9999;
 }
 html[lang="de"] .my-dropdown-menu {
-  min-width: 120px;
+  width: 160px
+  min-width: 160px;
+  max-width: 160px;
 }
 
 .dropdown-item:hover .my-dropdown-menu {
@@ -2194,7 +2198,9 @@ html[lang="de"] .my-dropdown-menu {
 .my-dropdown-menu a {
   display: block;
   color: #cccccc;
-  padding: 10px 15px;
+  padding: 8px 6px;
+  word-break: break-word;
+  overflow: break-word;
   font-size: 12px;
   font-weight: normal;
   text-transform: none;
