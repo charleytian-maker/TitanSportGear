@@ -2175,7 +2175,7 @@ ul.contact li a.icon-rss:before
   left: 50%;
   transform: translateX(-50%);
   background-color: #28a8a8;
-  min-width: 180px;
+  min-width: 150px;
   max-height: 350px;
   overflow-y: auto;
   padding: 5px 0;
@@ -2196,13 +2196,15 @@ html[lang="de"] .my-dropdown-menu {
   display: block;
   color: #cccccc;
   padding: 6px 10px;
-  font-size: 1px;
+  font-size: 11px;
   font-weight: normal;
   text-transform: none;
   text-align: center;
   text-decoration: none;
   background: none;
   border-bottom: 1px solid rgba(255,255,255,0.2);
+  word-break:break-word;
+  overflow-warp: breack-word;
 }
 
 .my-dropdown-menu a:last-child {
