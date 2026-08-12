@@ -1959,6 +1959,13 @@ ul.contact li a.icon-rss:before
 	color: #FFFFFF;
 }
 
+#menu li .my-dropdown-menu a {
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase; /* 如果想保留大写就留着，不想要就设 none */
+  padding: 8px 14px;
+}
+
 #menu .current_page_item a
 {
 	color: #DE6D53;
