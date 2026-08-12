@@ -1960,10 +1960,10 @@ ul.contact li a.icon-rss:before
 }
 
 #menu li .my-dropdown-menu a {
-  font-size: 13px;
+  font-size: 15px;
   letter-spacing: 0.5px;
-  text-transform: uppercase; /* 如果想保留大写就留着，不想要就设 none */
-  padding: 8px 14px;
+  text-transform: none; /* 如果想保留大写就留着，不想要就设 none */
+  padding: 10px 15px;
 }
 
 #menu .current_page_item a
