@@ -1956,7 +1956,7 @@ ul.contact li a.icon-rss:before
 	font-weight: 600;
 	text-transform: uppercase;
 	outline: 0;
-	color: #fff176;
+	color: #cccccc;
 }
 
 #menu .current_page_item a
@@ -2175,7 +2175,7 @@ ul.contact li a.icon-rss:before
   left: 50%;
   transform: translateX(-50%);
   background-color: #28a8a8;
-  min-width: 160px;
+  min-width: 120px;
   max-height: 350px;
   overflow-y: auto;
   padding: 5px 0;
@@ -2184,7 +2184,7 @@ ul.contact li a.icon-rss:before
   z-index: 9999;
 }
 html[lang="de"] .my-dropdown-menu {
-  min-width: px;
+  min-width: 120px;
 }
 
 .dropdown-item:hover .my-dropdown-menu {
