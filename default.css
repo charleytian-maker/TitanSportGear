@@ -2635,7 +2635,7 @@ html[lang="de"] .my-dropdown-menu {
 
   #header-wrapper {
     height: auto !important;
-    min-height: 220px;
+    min-height: 480px;
   }
 
 }
@@ -2686,7 +2686,7 @@ html[lang="de"] .my-dropdown-menu {
 
   #header-wrapper {
     height: auto !important;
-    min-height: 160px;
+    min-height: 480px;
   }
 
   /* Welcome 区块标题/正文字号和内边距缩小，适配窄屏 */
