@@ -114,5 +114,20 @@
     <priority>0.7</priority>
   </url>
 
-  
+  <url>
+    <loc>https://titansportgear.com/blog/post?slug=fast-growing-sport-for-everyone</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://titansportgear.com/blog/post?slug=fast-growing-sport-for-everyone" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://titansportgear.com/de/blog/post?slug=schnell-wachsende-sportart-pickleball&amp;lang=de" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://titansportgear.com/de/blog/post?slug=schnell-wachsende-sportart-pickleball&amp;lang=de</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://titansportgear.com/de/blog/post?slug=schnell-wachsende-sportart-pickleball&amp;lang=de" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://titansportgear.com/blog/post?slug=fast-growing-sport-for-everyone" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
 </urlset>
