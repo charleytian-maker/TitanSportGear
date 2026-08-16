@@ -2720,14 +2720,14 @@ html[lang="de"] .my-dropdown-menu {
   }
 
   /* 导航菜单在窄屏下改为纵向堆叠，避免文字挤在一起 */
-  #nav ul,
-  nav ul {
+  #menu ul,
+  menu ul {
     display: block !important;
     text-align: center;
   }
 
-  #nav ul li,
-  nav ul li {
+  #menu ul li,
+  menu ul li {
     display: block !important;
     width: 100% !important;
     margin: 0 !important;
