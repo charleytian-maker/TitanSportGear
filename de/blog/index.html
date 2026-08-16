@@ -29,18 +29,25 @@
         <span class="byline">Anleitungen, Tipps und Produktneuigkeiten</span>
       </div>
 
-      <div class="blog-list">
-        <div class="blog-card">
-          <a href="post-001.html">
-            <h3>Wie man das richtige Pickleball-Paddle auswählt</h3>
-          </a >
-          <p class="blog-date">Juli 2026</p >
-          <p>Eine kurze Anleitung zu Paddelgewicht, Griffgröße und Material für Anfänger und fortgeschrittene Spieler.</p >
-          <a href="post-001.html">Weiterlesen &raquo;</a >
-        </div>
+ <div class="blog-list" id="blog-list">Loading...</div>
 
-        <!-- Jeder neue Artikel: Diesen .blog‑Card‑Block kopieren und oben einfügen -->
+<script>
+fetch('/api/posts?lang=de')
+  .then(res => res.json())
+  .then(posts => {
+    const list = document.getElementById('blog-list');
+    list.innerHTML = posts.map(post => `
+      <div class="blog-card">
+        <a href="post.html?slug=${post.slug}&lang=de">
+          <h3>${post.title}</h3>
+        </a >
+        <p class="blog-date">${post.published_at}</p >
+        <p>${post.excerpt}</p >
+        <a href="post.html?slug=${post.slug}&lang=de">Weiterlesen &raquo;</a >
       </div>
+    `).join('');
+  });
+</script>
     </div>
   </div>
 

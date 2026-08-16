@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title id="page-title">Blog</title>
+<link rel="stylesheet" href="../../default.css">
+</head>
+<body>
+<div id="header-wrapper"></div>
+<script src="../../load-header.js"></script>
+
+<div id="page" class="container">
+  <div id="content">
+    <div class="title">
+      <h2 id="post-title">Wird geladen...</h2>
+      <span class="byline" id="post-date"></span>
+    </div>
+    <article class="blog-post" id="post-content"></article>
+    <p><a href="/de/blog/index.html">&laquo; Zurück zum Blog</a ></p >
+  </div>
+</div>
+
+<div id="footer-wrapper"></div>
+<script src="../../load-footer.js"></script>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const slug = params.get('slug');
+const lang = params.get('lang') || 'de';
+
+fetch('/api/post?slug=' + encodeURIComponent(slug) + '&lang=' + encodeURIComponent(lang))
+  .then(res => res.json())
+  .then(post => {
+    if (post.error) {
+      document.getElementById('post-title').textContent = 'Beitrag nicht gefunden';
+      return;
+    }
+    document.title = post.title;
+    document.getElementById('page-title').textContent = post.title;
+    document.getElementById('post-title').textContent = post.title;
+    document.getElementById('post-date').textContent = 'Veröffentlicht ' + post.published_at;
+    document.getElementById('post-content').innerHTML = post.content;
+  })
+  .catch(err => {
+    document.getElementById('post-title').textContent = 'Fehler beim Laden';
+    console.error('Failed to load post:', err);
+  });
+</script>
+</body>
+</html>
