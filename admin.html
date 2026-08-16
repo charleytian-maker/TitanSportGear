@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>发布新文章</title>
+<style>
+body { font-family: sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; }
+label { display: block; margin-top: 15px; font-weight: bold; }
+input, textarea, select { width: 100%; padding: 8px; margin-top: 5px; box-sizing: border-box; }
+textarea { height: 200px; }
+button { margin-top: 20px; padding: 10px 20px; font-size: 16px; }
+#msg { margin-top: 15px; font-weight: bold; }
+</style>
+</head>
+<body>
+<h1>发布新文章</h1>
+
+<label>密码</label>
+<input type="password" id="password">
+
+<label>语言</label>
+<select id="lang">
+  <option value="en">英语 (en)</option>
+  <option value="de">德语 (de)</option>
+</select>
+
+<label>标题</label>
+<input type="text" id="title">
+
+<label>Slug(英文网址短名,比如 pickle ball-guide,不要空格)</label>
+<input type="text" id="slug">
+
+<label>摘要（列表页显示的一小段介绍）</label>
+<input type="text" id="excerpt">
+
+<label>正文内容（可以直接写，会自动换行处理成段落）</label>
+<textarea id="content"></textarea>
+
+<button onclick="submitPost()">发布</button>
+<div id="msg"></div>
+
+<script>
+function submitPost() {
+  const title = document.getElementById('title').value.trim();
+  const slug = document.getElementById('slug').value.trim();
+  const excerpt = document.getElementById('excerpt').value.trim();
+  const lang = document.getElementById('lang').value;
+  const password = document.getElementById('password').value;
+  let content = document.getElementById('content').value.trim();
+
+  // 自动把换行的段落包成 <p> 标签
+  content = content.split('\n\n').map(p => `<p>${p.trim()}</p >`).join('');
+
+  const msg = document.getElementById('msg');
+
+  if (!title || !slug || !content) {
+    msg.textContent = '标题、Slug、正文都必须填写';
+    msg.style.color = 'red';
+    return;
+  }
+
+  msg.textContent = '发布中...';
+  msg.style.color = 'black';
+
+  fetch('/api/create-post', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ title, slug, content, excerpt, lang, password })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.success) {
+      msg.textContent = '发布成功！';
+      msg.style.color = 'green';
+      document.getElementById('title').value = '';
+      document.getElementById('slug').value = '';
+      document.getElementById('excerpt').value = '';
+      document.getElementById('content').value = '';
+    } else {
+      msg.textContent = '失败：' + (data.error || '未知错误');
+      msg.style.color = 'red';
+    }
+  })
+  .catch(err => {
+    msg.textContent = '请求失败：' + err;
+    msg.style.color = 'red';
+  });
+}
+</script>
+</body>
+</html>
