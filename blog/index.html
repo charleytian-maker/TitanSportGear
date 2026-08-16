@@ -29,18 +29,25 @@
         <span class="byline">Guides, tips and product news</span>
       </div>
 
-      <div class="blog-list">
-        <div class="blog-card">
-          <a href="post-1.html">
-           <h3>The Fast-Growing Sport for Everyone</h3>
-          </a >
-          <p class="blog-date">July 2026</p >
-          <p>A quick guide to paddle weight, grip size and material for beginners and intermediate players.</p >
-          <a href="post-1.html">Read more &raquo;</a >
-        </div>
+      <div class="blog-list" id="blog-list">Loading...</div>
 
-        <!-- 每篇新文章复制上面这个 .blog-card 块，加在最上面 -->
+<script>
+fetch('/api/posts')
+  .then(res => res.json())
+  .then(posts => {
+    const list = document.getElementById('blog-list');
+    list.innerHTML = posts.map(post => `
+      <div class="blog-card">
+        <a href="post.html?slug=${post.slug}">
+          <h3>${post.title}</h3>
+        </a >
+        <p class="blog-date">${post.published_at}</p >
+        <p>${post.excerpt}</p >
+        <a href="post.html?slug=${post.slug}">Read more &raquo;</a >
       </div>
+    `).join('');
+  });
+</script>
     </div>
   </div>
 
