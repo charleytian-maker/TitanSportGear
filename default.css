@@ -2691,7 +2691,7 @@ html[lang="de"] .my-dropdown-menu {
 
   /* Welcome 区块标题/正文字号和内边距缩小，适配窄屏 */
   #welcome {
-    margin-top: 40px !important;
+    margin-top: 100px !important;
   }
 
   #welcome .title h2 {
