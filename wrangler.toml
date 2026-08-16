@@ -5,3 +5,7 @@ compatibility_date = "2026-06-25"
 [assets]
 directory = "." 
 not_found_handling = "none"
+[[d1_databases]]
+binding = "DB"
+database_name = "titansportgear-blog"
+database_id = "ab3c18f1-c794-4cf0-a024-06cd41af2946"
