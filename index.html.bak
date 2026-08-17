@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : TitanSportGear
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20130631
+
+-->
+<html lang="en" xmlns="http://w3.org">
+<head>
+<link rel="canonical" href="https://titansportgear.com/">
+<link rel="alternate" hreflang="en" href="https://titansportgear.com/index.html">
+<link rel="alternate" hreflang="de" href="https://titansportgear.com/de/index.html">
+<link rel="alternate" hreflang="x-default" href="https://titansportgear.com/index.html">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TitanSportGear | Sporting Goods Manufacturer (OEM/ODM)</title>
+<meta name="keywords" content="sports ball, basketball, soccer ball, volleyball, OEM sports goods" />
+<meta name="description" content="TitanSportGear professional manufacturer & exporter of sporting goods over 20 years, OEM ODM available." />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet" type="text/css" media="all" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KW760Q6V16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KW760Q6V16');
+</script>
+<!--[if IE 6]>
+<link href="default_ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<style>
+  /* 导航下拉菜单 */
+  #menu ul li {
+    position: relative !important;
+  }
+  
+  #header-wrapper {
+    position: relative;
+    z-index: 99999;
+  }
+  #welcome {
+    position: relative;
+    z-index: 1 !important;
+  }
+  #header-wrapper, 
+  #header, 
+  #menu, 
+  .dropdown-item {
+    overflow: visible !important;
+  }
+
+  /* 图片弹窗基础样式（缺失补充） */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.85);
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-content {
+    max-width: 90%;
+  }
+  .close-btn {
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    position: absolute;
+    right: 30px;
+    top: 15px;
+    cursor: pointer;
+  }
+  .modal-desc {
+    color: #fff;
+    margin-top:12px;
+    text-align:center;
+  }
+</style>
+</head>
+<body>
+<!-- 弹窗移至body内顶部，仅保留一份 -->
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <div id="modalImgContainer">
+      <img id="modalImg" src="https://img.titansportgear.com/bg01.jpg" alt="enlarged image" style="max-width: 100%; max-height:70vh; object-fit:contain;"/>
+    </div>
+    <div id="modalDescription" class="modal-desc"></div>
+  </div>
+</div>
+
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1><a href="index.html"><img src="https://img.titansportgear.com/logo-04.png" alt="TitanSportGear"></a></h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li class="current_page_item"><a href="./index.html" accesskey="1" title="">Home</a ></li>
+				<li class="dropdown-item">
+          <a href="index.html" accesskey="2" title="">Products</a >
+          <div class="my-dropdown-menu">
+            <!-- 建议后续重命名文件去除空格 Playground_ball.html -->
+
+			      <a href="Pickleball.html">Pickleball</a >
+            <a href="Badminton.html">Badminton</a >
+            <a href="Tennisball.html">Tennis</a >
+            <a href="Beachracketset.html">Beach racket set</a >
+            <a href="Basketball.html">Basketball</a >
+            <a href="Soccerball.html">Soccerball</a >
+            <a href="Volleyball.html">Volleyball</a >
+            <a href="Playgroundball.html">Playground ball</a >
+            <a href="Americanfootball.html">American football/Rugby ball</a >
+            <a href="Baseball.html">Other balls&accessories</a >
+          </div>
+        </li>
+				<li><a href="aboutus.html" accesskey="3" title="">About Us</a ></li>
+        <li><a href="blog/index.html" accesskey="4" title="">Blog</a ></li>
+				<li><a href="contactus.html" accesskey="5" title="">Contact Us</a ></li>
+				<li class="lang-switch">
+          <a href="index.html" id="lang-en" class="lang-active">EN</a > | <a href="de/index.html" id="lang-de">DE</a >
+        </li>
+			</ul>
+		</div>
+	 </div>
+  </div>
+<div id="welcome" class="wrapper-style1">
+	<div class="title">
+		<h2>Welcome to TitanSportGear</h2>
+		<span class="byline">A professional manufacturer & exporter sporting goods</span>
+	</div>
+	<p>We are dedicated to producing top-tier sporting goods with cutting-edge technology and premium materials. Our global export network ensures that athletes worldwide receive the finest equipment for basketball, soccer, and other field sports. Quality and innovation drive everything we create.</p >
+</div>
+<div id="page" class="container">
+	<div id="content">
+		<div class="title">
+			<h2>Unleash Your Athletic Potential</h2>
+		</div>
+		<span class="image image-full">
+  <video autoplay muted loop playsinline>
+    <source src="videos/TitanSportGear.mp4" type="video/mp4">
+  </video>
+</span>
+		<p>At TitanSportGear, we are committed to delivering world-class sporting goods that inspire athletes to push their limits. Every basketball, soccer ball, and piece of protective gear we export is crafted using state-of-the-art manufacturing processes and rigorously tested for exceptional durability and control. We partner with teams and retailers worldwide to provide premium equipment that guarantees peak performance on any court or field.</p >
+		<h3>&nbsp;</h3>
+		<h3>About TSG</h3>
+		<p>TitanSportGear (TSG) is a premier, world-class manufacturer and exporter specializing in high-quality sports balls and professional athletic equipment. With over 20 years of industry experience, our state-of-the-art production facility utilizes advanced manufacturing technologies and premium, eco-friendly raw materials to ensure every product delivers superior durability, precision, and performance. We strictly adhere to international quality control standards, making us a trusted OEM/ODM partner for professional teams, global brands, and sports retailers across North America, Europe, and Asia. From custom branding to seamless global logistics, TSG is dedicated to supporting your business growth with reliable supply chains and exceptional customer service.</p >
+	</div>
+	<div id="sidebar">
+		<div id="sbox1">
+			<div class="title">
+				<h2>Our main Products</h2>
+			</div>
+			<ul class="style2">
+				<li><a href="Pickleball.html">Pickleball</a ></li>
+        <li><a href="Badminton.html">Badminton</a ></li>
+        <li><a href="Tennisball.html">Tennis</a ></li>
+        <li><a href="Beachracketset.html">Beach Racket</a ></li>
+				<li><a href="Basketball.html">Basketball</a ></li>
+				<li><a href="Soccerball.html">Soccerball</a ></li>
+				<li><a href="Playgroundball.html">Playground</a ></li>
+			</ul>
+		</div>
+		<div id="sbox2">
+			<div class="title">
+				<h2>Why Choose TSG</h2>
+			</div>
+			<ul class="style2">
+				<li><a href="aboutus.html#company-intro">20+Years Export Experience</a ></li>
+				<li><a href="aboutus.html#materials">Eco-Friendly & Durable Materials</a ></li>
+				<li><a href="aboutus.html#quality-control">Strict Global Quality Control</a ></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div id="featured-wrapper">
+	<div id="featured" class="container">
+		<div id="box1">
+			<div class="title">
+				<h2>Global Logistics</h2>
+			</div>
+			<ul class="style1">
+				<li class="first"><a href="aboutus.html#shipping">Fast Ocean & Air Freight</a ></li>
+				<li><a href="aboutus.html#shipping">Real-time Cargo Tracking</a ></li>
+				<li><a href="aboutus.html#shipping">Customs Clearance Support</a ></li>
+				<li><a href="aboutus.html#quality-control">Secure Protective Packaging</a ></li>
+				<li><a href="aboutus.html#shipping">Door to Door Delivery</a ></li>
+			</ul>
+		</div>
+		<div id="box2">
+			<div class="title">
+				<h2>Quality Assurance</h2>
+			</div>
+			<ul class="style1">
+				<li class="first"><a href="aboutus.html#materials">Premium Eco-Raw Materials</a ></li>
+				<li><a href="aboutus.html#quality-control">Strict 100% QC Inspection</a ></li>
+				<li><a href="aboutus.html#quality-control">International Standards Certificated</a ></li>
+				<li><a href="aboutus.html#quality-control">Durability & Pressure Tested</a ></li>
+				<li><a href="aboutus.html#quality-control">Defective Product Replacement</a ></li>
+			</ul>
+		</div>
+		<div id="box3">
+			<div class="title">
+				<h2>OEM &ODM Services</h2>
+			</div>
+			<ul class="style1">
+				<li class="first"><a href="aboutus.html#oem-services">Custom Logo & Brand Printing</a ></li>
+				<li><a href="aboutus.html#oem-services">Personalized Color & Size Options</a ></li>
+				<li><a href="aboutus.html#oem-services">Professional Design Team support</a ></li>
+				<li><a href="aboutus.html#oem-services">Flexible Minimum Order Quantity(MOQ)</a ></li>
+				<li><a href="aboutus.html#oem-services">Fast Prototype Sample Making</a ></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div id="footer-placeholder"></div>
+<script type="text/javascript">
+function openModal(imgElement) {
+    const modal = document.getElementById("imageModal");
+    const container = document.getElementById("modalImgContainer");
+    const modalDesc = document.getElementById("modalDescription");
+
+    modal.style.display = "flex";
+    container.innerHTML = '<img id="modalImg" src="' + imgElement.src + '" alt="放大图片" style="max-width: 100%; max-height: 70vh; object-fit: contain;"/>';
+
+    const productTitle = imgElement.alt;
+    modalDesc.innerText = productTitle + " - \n\n This is professional sports equipment. Made of premium durable material, precise control and comfortable grip.";
+}
+
+function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+}
+</script>
+<script src="/load-footer.js"></script>
+<script src="/script.js"></script>
+</body>
+</html>
