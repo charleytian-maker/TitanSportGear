@@ -24,19 +24,19 @@ button { margin-top: 20px; padding: 10px 20px; font-size: 16px; }
   <option value="de">德语 (de)</option>
 </select>
 
-<label>标题</label>
+<label>Title</label>
 <input type="text" id="title">
 
-<label>Slug(英文网址短名,比如 pickle ball-guide,不要空格)</label>
+<label>Slug (URL‑friendly name, e.g. pickle‑ball‑guide, no space)</label>
 <input type="text" id="slug">
 
-<label>摘要（列表页显示的一小段介绍）</label>
+<label>Excerpt (short summary for listing page)</label>
 <input type="text" id="excerpt">
 
-<label>正文内容（可以直接写，会自动换行处理成段落）</label>
+<label>Content (line breaks will convert to paragraph tags automatically)</label>
 <textarea id="content"></textarea>
 
-<button onclick="submitPost()">发布</button>
+<button onclick="submitPost()">Publish</button>
 <div id="msg"></div>
 
 <script>
@@ -45,17 +45,14 @@ function submitPost() {
   const slug = document.getElementById('slug').value.trim();
   const excerpt = document.getElementById('excerpt').value.trim();
   const lang = document.getElementById('lang').value;
-  const password = document.getElementById('password').value;
-  let content = document.getElementById('content').value.trim();
+  const content = document.getElementById('content').value.trim();
 
-  // 自动把换行的段落包成 <p> 标签
-  content = content.split('\n\n').map(p => `<p>${p.trim()}</p >`).join('');
+  // Convert line breaks to <p> tags
+  content = content.split('\n').map(p => `<p>${p.trim()}</p >`).join('');
 
   const msg = document.getElementById('msg');
-
   if (!title || !slug || !content) {
-    msg.textContent = '标题、Slug、正文都必须填写';
-    msg.style.color = 'red';
+    msg.textContent = 'Title, Slug and Content are required.';
     return;
   }
 

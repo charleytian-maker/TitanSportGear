@@ -3,113 +3,113 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://titansportgear.com/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://titansportgear.com/index.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://titansportgear.com/de/index.html" />
+    <loc>https://titansportgear.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://titansportgear.com/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://titansportgear.com/de/" />
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://titansportgear.com/aboutus.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://titansportgear.com/aboutus.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://titansportgear.com/de/aboutus.html" />
+    <loc>https://titansportgear.com/aboutus</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://titansportgear.com/aboutus" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://titansportgear.com/de/aboutus" />
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://titansportgear.com/contactus.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://titansportgear.com/contactus.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://titansportgear.com/de/contactus.html" />
+    <loc>https://titansportgear.com/contactus</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://titansportgear.com/contactus" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://titansportgear.com/de/contactus" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://titansportgear.com/Basketball.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://titansportgear.com/Basketball.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://titansportgear.com/de/Basketball.html" />
+    <loc>https://titansportgear.com/Basketball</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://titansportgear.com/Basketball" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://titansportgear.com/de/Basketball" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://titansportgear.com/Pickleball.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://titansportgear.com/Pickleball.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://titansportgear.com/de/Pickleball.html" />
+    <loc>https://titansportgear.com/Pickleball</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://titansportgear.com/Pickleball" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://titansportgear.com/de/Pickleball" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://titansportgear.com/Volleyball.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://titansportgear.com/Volleyball.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://titansportgear.com/de/Volleyball.html" />
+    <loc>https://titansportgear.com/Volleyball</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://titansportgear.com/Volleyball" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://titansportgear.com/de/Volleyball" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://titansportgear.com/Soccerball.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://titansportgear.com/Soccerball.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://titansportgear.com/de/Soccerball.html" />
+    <loc>https://titansportgear.com/Soccerball</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://titansportgear.com/Soccerball" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://titansportgear.com/de/Soccerball" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://titansportgear.com/Tennisball.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://titansportgear.com/Tennisball.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://titansportgear.com/de/Tennisball.html" />
+    <loc>https://titansportgear.com/Tennisball</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://titansportgear.com/Tennisball" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://titansportgear.com/de/Tennisball" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://titansportgear.com/Baseball.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://titansportgear.com/Baseball.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://titansportgear.com/de/Baseball.html" />
+    <loc>https://titansportgear.com/Baseball</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://titansportgear.com/Baseball" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://titansportgear.com/de/Baseball" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://titansportgear.com/Badminton.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://titansportgear.com/Badminton.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://titansportgear.com/de/Badminton.html" />
+    <loc>https://titansportgear.com/Badminton</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://titansportgear.com/Badminton" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://titansportgear.com/de/Badminton" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://titansportgear.com/Americanfootball.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://titansportgear.com/Americanfootball.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://titansportgear.com/de/Americanfootball.html" />
+    <loc>https://titansportgear.com/Americanfootball</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://titansportgear.com/Americanfootball" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://titansportgear.com/de/Americanfootball" />
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://titansportgear.com/Beachracketset.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://titansportgear.com/Beachracketset.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://titansportgear.com/de/Beachracketset.html" />
+    <loc>https://titansportgear.com/Beachracketset</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://titansportgear.com/Beachracketset" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://titansportgear.com/de/Beachracketset" />
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://titansportgear.com/Playgroundball.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://titansportgear.com/Playgroundball.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://titansportgear.com/de/Playgroundball.html" />
+    <loc>https://titansportgear.com/Playgroundball</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://titansportgear.com/Playgroundball" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://titansportgear.com/de/Playgroundball" />
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://titansportgear.com/blog/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://titansportgear.com/blog/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://titansportgear.com/de/blog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://titansportgear.com/blog/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://titansportgear.com/de/blog/" />
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
