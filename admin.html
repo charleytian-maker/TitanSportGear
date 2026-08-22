@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>发布新文章</title>
+<title>Create New Article</title>
 <style>
 body { font-family: sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; }
 label { display: block; margin-top: 15px; font-weight: bold; }
@@ -13,15 +13,15 @@ button { margin-top: 20px; padding: 10px 20px; font-size: 16px; }
 </style>
 </head>
 <body>
-<h1>发布新文章</h1>
+<h1>Create New Article</h1>
 
-<label>密码</label>
+<label>Password</label>
 <input type="password" id="password">
 
-<label>语言</label>
+<label>Language</label>
 <select id="lang">
-  <option value="en">英语 (en)</option>
-  <option value="de">德语 (de)</option>
+  <option value="en">English (en)</option>
+  <option value="de">German (de)</option>
 </select>
 
 <label>Title</label>
@@ -56,7 +56,7 @@ function submitPost() {
     return;
   }
 
-  msg.textContent = '发布中...';
+  msg.textContent = 'Publishing...';
   msg.style.color = 'black';
 
   fetch('/api/create-post', {
@@ -67,19 +67,19 @@ function submitPost() {
   .then(res => res.json())
   .then(data => {
     if (data.success) {
-      msg.textContent = '发布成功！';
+      msg.textContent = 'Publishing successful!';
       msg.style.color = 'green';
       document.getElementById('title').value = '';
       document.getElementById('slug').value = '';
       document.getElementById('excerpt').value = '';
       document.getElementById('content').value = '';
     } else {
-      msg.textContent = '失败：' + (data.error || '未知错误');
+      msg.textContent = 'Failed: ' + (data.error || 'Unknown error');
       msg.style.color = 'red';
     }
   })
   .catch(err => {
-    msg.textContent = '请求失败：' + err;
+    msg.textContent = 'Request failed: ' + err;
     msg.style.color = 'red';
   });
 }
