@@ -2031,7 +2031,7 @@ ul.contact li a.icon-rss:before
 	padding: 5em 0em;
 	text-align: center;
 	text-transform: uppercase;
-	color: #6F6F6F;
+	color: #fff;
 }
 
 #footer .title
@@ -2056,7 +2056,7 @@ ul.contact li a.icon-rss:before
 
 #footer a
 {
-	color: #7F7F7F;
+	color: #fff;
 }
 
 #footer header .byline
