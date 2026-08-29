@@ -12,6 +12,8 @@
           <div class="my-dropdown-menu">
             <a href="/de/Pickleball.html">Pickleball</a >
             <a href="/de/Badminton.html">Badminton</a >
+            <a href="/de/netandpost.html">Netze und Pfosten</a>
+            <a href="/de/protectivegear.html">Schutzausrüstung</a>
             <a href="/de/Tennisball.html">Tennis</a >
             <a href="/de/Beachracketset.html">Strandschläger Set</a >
             <a href="/de/Basketball.html">Basketball</a >
