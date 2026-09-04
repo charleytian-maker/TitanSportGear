@@ -1,7 +1,7 @@
 <div id="header-wrapper">
   <div id="header" class="container">
     <div id="logo">
-      <h1><a href="/de/"><img src="https://img.titansportgear.com/logo-04.png" alt="TitanSportGear Carbonfaser Pickleball-Schläger Sportartikel"></a ></h1>
+      <h2><a href="/de/"><img src="https://img.titansportgear.com/logo-04.png" alt="TitanSportGear Carbonfaser Pickleball-Schläger Sportartikel"></a ></h2>
     </div>
     <div id="menu">
       <ul>
