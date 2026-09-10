@@ -64,9 +64,8 @@ fetch('/api/post?slug=' + encodeURIComponent(slug))
 document.getElementById('page-title').textContent = post.title;
 document.getElementById('post-title').textContent = post.title;
 document.getElementById('post-date').textContent = 'Published ' + post.published_at.split(' ')[0];
-document.getElementById('post-content').innerHTML = 
-  (post.image_url ? `<img src="${post.image_url}" alt="${post.title}" style="max-width:100%;border-radius:8px;margin-bottom:20px;">` : '') 
-  + post.content;
+document.getElementById('post-content').innerHTML = (post.image_url ? `<img src="${post.image_url}" alt="${post.title}" style="max-width:100%;border-radius:8px;margin-bottom:20px;">` : '') + post.content;
+
 if(!metaDesc){
   metaDesc = document.createElement('meta');
   metaDesc.name="description";
