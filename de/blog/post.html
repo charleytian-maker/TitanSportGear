@@ -64,10 +64,12 @@ fetch('/api/post?slug=' + encodeURIComponent(slug) + '&lang=' + encodeURICompone
       return;
     }
     document.title = post.title;
-    document.getElementById('page-title').textContent = post.title;
-    document.getElementById('post-title').textContent = post.title;
-    document.getElementById('post-date').textContent = 'Veröffentlicht ' + post.published_at;
-    document.getElementById('post-content').innerHTML = post.content;
+document.getElementById('page-title').textContent = post.title;
+document.getElementById('post-title').textContent = post.title;
+document.getElementById('post-date').textContent = 'Veröffentlicht ' + post.published_at.split(' ')[0];
+document.getElementById('post-content').innerHTML = 
+  (post.image_url ? `<img src="${post.image_url}" alt="${post.title}" style="max-width:100%;border-radius:8px;margin-bottom:20px;">` : '') 
+  + post.content;
     let metaDesc = document.querySelector('meta[name="description"]');
 if(!metaDesc){
   metaDesc = document.createElement('meta');

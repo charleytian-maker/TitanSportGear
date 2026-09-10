@@ -95,7 +95,7 @@ async function deletePost(slug, lang) {
 
 // 页面加载时自动拉取文章列表
 loadPostList();
-
+let uploadedImageUrl = '';
 async function uploadMedia() {
   const fileInput = document.getElementById('mediaFile');
   const file = fileInput.files[0];
@@ -111,13 +111,9 @@ async function uploadMedia() {
   const data = await res.json();
 
   if (data.url) {
-    const tag = file.type.startsWith('video')
-      ? `<video src="${data.url}" controls></video>`
-      : `<img src="${data.url}" alt="${title || file.name}">`;
-    const contentBox = document.getElementById('content');
-    contentBox.value += `\n${tag}\n`;
-    document.getElementById('msg').innerText = '上传成功，已插入正文';
-  } else {
+    uploadedImageUrl = data.url;
+    document.getElementById('msg').innerText = '上传成功：' + data.url;
+} else {
     document.getElementById('msg').innerText = '上传失败：' + (data.error || '未知错误');
   }
 }
@@ -147,11 +143,12 @@ function submitPost() {
   fetch('/api/create-post', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ title, slug, content, excerpt, lang, password })
+    body: JSON.stringify({ title, slug, content, excerpt, lang, password, image: uploadedImageUrl })
   })
   .then(res => res.json())
   .then(data => {
     if (data.success) {
+      uploadedImageUrl = '';
       msg.textContent = 'Publishing successful!';
       msg.style.color = 'green';
       document.getElementById('title').value = '';
